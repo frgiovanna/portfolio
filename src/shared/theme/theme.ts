@@ -44,7 +44,7 @@ export const theme = {
   colors: {
     cloud: '#FFFFFF',
     dawn: '#3E3E3E',
-    evening: '#D98282',
+    evening: '#FE9F9F',
     fog: '#FAF6F3',
     misty: '#F2F2F2',
     morning: '#FFCDCD',

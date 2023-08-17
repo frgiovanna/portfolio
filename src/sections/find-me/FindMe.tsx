@@ -1,14 +1,22 @@
 import { Text } from '../../shared/components/Text';
 import { useBreakpoints } from '../../shared/hooks/useBreakpoints';
-import { Wrapper, Image, ContentWrapper } from './styles';
+import { LinkCard, LinkCardProps } from './components/LinkCard';
+import { Wrapper, LinksWrapper, ContentWrapper } from './styles';
 
-export const Introduction = () => {
+export const FindMe = () => {
   const { isDesktop } = useBreakpoints();
+
+  const magazines: LinkCardProps[] = [
+    { title: 'xpto1', description: 'Lorem Ipsum is simply dummy text of the', link: '#' },
+    { title: 'xpto2', description: 'Lorem Ipsum is simply dummy text of the', link: '#' },
+    { title: 'xpto3', description: 'Lorem Ipsum is simply dummy text of the', link: '#' },
+    { title: 'xpto4', description: 'Lorem Ipsum is simply dummy text of the', link: '#' },
+  ];
+
   return (
     <Wrapper>
-      {isDesktop && <Image src="/svg/smiling-avatar.svg" alt="image" />}
       <ContentWrapper>
-        <Text variant={isDesktop ? 'Huge' : 'Large'}>Olá, meu nome é Giovanna Freitas</Text>
+        <Text variant={isDesktop ? 'Huge' : 'Large'}>Find Me</Text>
         <Text>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
           standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
@@ -18,6 +26,11 @@ export const Introduction = () => {
           PageMaker including versions of Lorem Ipsum.
         </Text>
       </ContentWrapper>
+      <LinksWrapper>
+        {magazines.map((magazine) => (
+          <LinkCard {...magazine} />
+        ))}
+      </LinksWrapper>
     </Wrapper>
   );
 };
