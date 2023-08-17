@@ -7,9 +7,10 @@ export const Wrapper = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 32px;
 
   @media (min-width: 1024px) {
-    padding: 10% 20%;
+    padding: 6% 12%;
   }
 `;
 
