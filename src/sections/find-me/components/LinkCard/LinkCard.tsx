@@ -1,6 +1,6 @@
 import { Text } from '../../../../shared/components/Text';
 import { useBreakpoints } from '../../../../shared/hooks/useBreakpoints';
-import { Card, Image, Icon, Wrapper } from './styles';
+import { Card, Image, Icon, ContentWrapper } from './styles';
 
 export interface LinkCardProps {
   link: string;
@@ -16,11 +16,14 @@ export const LinkCard = ({ link, title, description }: LinkCardProps) => {
   };
   return (
     <Card onClick={() => !isDesktop && handleClick}>
-      <Icon />
-      <Wrapper>
-        <Text variant="H2">{title}</Text>
-        <Text>{description}</Text>
-      </Wrapper>
+      <ContentWrapper>
+        <Icon />
+        <div>
+          <Text variant="H2">{title}</Text>
+          <Text>{description}</Text>
+        </div>
+      </ContentWrapper>
+
       {isDesktop && (
         <a href={link}>
           <Image src="/svg/external-link.svg" alt="image" />

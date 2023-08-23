@@ -16,6 +16,8 @@ export const Wrapper = styled.section`
 export const LinksWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  flex: 1;
+  height: fit-content;
   gap: 32px;
   margin-top: 24px;
 

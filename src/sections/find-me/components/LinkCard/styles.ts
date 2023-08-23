@@ -7,6 +7,7 @@ export const Card = styled.div`
   align-items: center;
   padding: 16px 24px 16px 16px;
   border-radius: 30px;
+  justify-content: space-between;
 `;
 
 export const Image = styled.img`
@@ -19,9 +20,10 @@ export const Icon = styled.div`
   min-width: 60px;
   min-height: 60px;
   border-radius: 30px;
-  margin-right: 24px;
 `;
 
-export const Wrapper = styled.div`
-  margin-right: 24px;
+export const ContentWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 24px;
 `;
