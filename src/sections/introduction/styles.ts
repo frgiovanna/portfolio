@@ -7,10 +7,10 @@ export const Wrapper = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 32px;
+  padding: 32px 32px 48px;
 
   @media (min-width: 1024px) {
-    padding: 6% 12%;
+    padding: 5% 12%;
   }
 `;
 
@@ -26,5 +26,8 @@ export const Image = styled.img`
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 40px;
+  @media (min-width: 1024px) {
+    gap: 64px;
+  }
 `;

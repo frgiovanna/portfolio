@@ -5,7 +5,7 @@ export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   background-color: ${theme.colors.sky};
-  padding: 32px;
+  padding: 32px 32px 48px;
 
   @media (min-width: 1024px) {
     padding: 5% 12%;
@@ -17,12 +17,14 @@ export const LinksWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 32px;
+  margin-top: 24px;
 
   @media (min-width: 1024px) {
     background-color: ${theme.colors.morning};
     padding: 32px;
     gap: 32px;
     border-radius: 30px;
+    margin-top: 0;
   }
 `;
 
@@ -33,8 +35,8 @@ export const ContentWrapper = styled.div`
   gap: 40px;
 
   @media (min-width: 1024px) {
-    gap: 40px;
+    gap: 64px;
     flex: 1;
-    margin: 48px 10% 0 0;
+    margin: 8px 10% 0 0;
   }
 `;

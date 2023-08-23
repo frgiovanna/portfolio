@@ -2,31 +2,25 @@ import { styled } from 'styled-components';
 import { theme } from '../../shared/theme';
 
 export const Wrapper = styled.section`
+  background-color: ${theme.colors.morning};
+
   display: flex;
   flex-direction: column;
   gap: 40px;
-  background-color: ${theme.colors.fog};
   padding: 32px 32px 48px;
 
   @media (min-width: 1024px) {
-    padding: 5% 12%;
     gap: 64px;
+    padding: 5% 12%;
   }
 `;
 
-export const Block = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-`;
-
-export const ContentWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
+export const CardsWrapper = styled.div`
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
   @media (min-width: 1024px) {
-    flex-direction: row;
-    gap: 72px;
+    gap: 64px;
   }
 `;

@@ -23,21 +23,21 @@ export const Large = styled.h1<Props>`
 export const H1 = styled.h1<Props>`
   margin: 0;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
   color: ${({ color }) => color || theme.colors.night};
 `;
 
 export const H2 = styled.h2<Props>`
   margin: 0;
   font-size: 20.8px;
-  font-weight: 600;
+  font-weight: 500;
   color: ${({ color }) => color || theme.colors.night};
 `;
 
 export const H3 = styled.h3<Props>`
   margin: 0;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   color: ${({ color }) => color || theme.colors.dawn};
 `;
 

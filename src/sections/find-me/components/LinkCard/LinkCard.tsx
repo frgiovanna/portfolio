@@ -19,7 +19,7 @@ export const LinkCard = ({ link, title, description }: LinkCardProps) => {
       <Icon />
       <Wrapper>
         <Text variant="H2">{title}</Text>
-        <Text variant="H3">{description}</Text>
+        <Text>{description}</Text>
       </Wrapper>
       {isDesktop && (
         <a href={link}>

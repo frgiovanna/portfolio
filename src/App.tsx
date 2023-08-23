@@ -1,6 +1,7 @@
 import { Introduction } from './sections/introduction';
 import { FindMe } from './sections/find-me';
 import { Interests } from './sections/interests';
+import { Skills } from './sections/skills';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Introduction />
       <FindMe />
       <Interests />
+      <Skills />
     </>
   );
 }
