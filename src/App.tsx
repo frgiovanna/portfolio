@@ -2,6 +2,7 @@ import { Introduction } from './sections/introduction';
 import { FindMe } from './sections/find-me';
 import { Interests } from './sections/interests';
 import { Skills } from './sections/skills';
+import { Contact } from './sections/contact';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <FindMe />
       <Interests />
       <Skills />
+      <Contact />
     </>
   );
 }
