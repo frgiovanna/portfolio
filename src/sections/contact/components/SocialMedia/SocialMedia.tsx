@@ -11,18 +11,16 @@ interface SocialMideaProps {
 
 export const SocialMedia = ({ link, image, title, subtitle }: SocialMideaProps) => {
   return (
-    <Wrapper>
-      <Image src={image} alt={title} />
-      <div>
-        <Link href={link}>
+    <Link href={link}>
+      <Wrapper>
+        <Image src={image} alt={title} />
+        <div>
           <Text color={theme.colors.night} variant="H3">
             {title}
           </Text>
-        </Link>
-        <Link href={link}>
           <Text>{subtitle}</Text>
-        </Link>
-      </div>
-    </Wrapper>
+        </div>
+      </Wrapper>
+    </Link>
   );
 };
