@@ -8,13 +8,14 @@ interface AlternatingTimelineProps {
   content: {
     title: string;
     description: string;
+    duration: string;
   }[];
 }
 
 export const AlternatingTimeline = ({ content }: AlternatingTimelineProps) => {
   return (
     <Timeline position="alternate-reverse">
-      {content.map(({ title, description }, index) => {
+      {content.map(({ title, description, duration }, index) => {
         const isFirstItem = index === 0;
         const isLeftContent = index % 2 === 0;
 
@@ -25,7 +26,12 @@ export const AlternatingTimeline = ({ content }: AlternatingTimelineProps) => {
               <Dot />
               <Connector style={isFirstItem ? { marginTop: '10px' } : undefined} />
             </TimelineSeparator>
-            <Content position={isLeftContent ? 'left' : 'right'} title={title} description={description} />
+            <Content
+              position={isLeftContent ? 'left' : 'right'}
+              title={title}
+              description={description}
+              duration={duration}
+            />
           </TimelineItem>
         );
       })}

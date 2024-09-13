@@ -8,6 +8,7 @@ interface RightTimelineProps {
   content: {
     title: string;
     description: string;
+    duration: string;
   }[];
 }
 export default function RightTimeline({ content }: RightTimelineProps) {
@@ -21,7 +22,7 @@ export default function RightTimeline({ content }: RightTimelineProps) {
         },
       }}
     >
-      {content.map(({ title, description }, index) => {
+      {content.map(({ title, description, duration }, index) => {
         const isFirstItem = index === 0;
         const isLastItem = index === content.length - 1;
 
@@ -31,7 +32,7 @@ export default function RightTimeline({ content }: RightTimelineProps) {
               <Dot />
               <Connector style={isFirstItem ? { marginTop: '10px' } : undefined} />
             </TimelineSeparator>
-            <Content title={title} description={description} isLastItem={isLastItem} />
+            <Content title={title} description={description} duration={duration} isLastItem={isLastItem} />
           </TimelineItem>
         );
       })}

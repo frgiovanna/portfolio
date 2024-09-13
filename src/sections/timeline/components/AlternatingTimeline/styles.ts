@@ -19,5 +19,6 @@ export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 16px;
   flex: 3;
 `;
