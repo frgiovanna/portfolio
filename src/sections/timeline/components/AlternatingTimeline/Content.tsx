@@ -7,6 +7,7 @@ interface ContentProps {
   position: 'left' | 'right';
   title: string;
   description: string;
+  isMobile?: boolean;
 }
 export const Content = ({ position, title, description }: ContentProps) => {
   return (
@@ -21,7 +22,7 @@ export const Content = ({ position, title, description }: ContentProps) => {
           </div>
         </TextWrapper>
 
-        <HorizontalLine />
+         <HorizontalLine />
       </ContentWrapper>
     </TimelineContent>
   );
