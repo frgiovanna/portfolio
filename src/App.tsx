@@ -4,6 +4,7 @@ import { Interests } from './sections/interests';
 import { Skills } from './sections/skills';
 import { Contact } from './sections/contact';
 import { Timeline } from './sections/timeline';
+import { Projects } from './sections/projects/Projects';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <FindMe />
       <Interests />
       <Skills />
+      <Projects/>
       <Contact />
     </>
   );
