@@ -53,5 +53,7 @@ export const H3 = styled.h3<Props>`
 
 export const Body = styled.p<Props>`
   margin: 0;
+  line-height: 22px;
+  font-size: 16px;
   color: ${({ color }) => color || theme.colors.dawn};
 `;
