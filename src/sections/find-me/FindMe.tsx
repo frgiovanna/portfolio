@@ -1,12 +1,9 @@
 import { Section } from '../../shared/components/Section';
 import { Text } from '../../shared/components/Text';
-import { useBreakpoints } from '../../shared/hooks/useBreakpoints';
 import { LinkCard, LinkCardProps } from './components/LinkCard';
 import { Wrapper, LinksWrapper, ContentWrapper } from './styles';
 
 export const FindMe = () => {
-  const { isDesktop } = useBreakpoints();
-
   const magazines: LinkCardProps[] = [
     { title: 'xpto1', description: 'Lorem Ipsum is simply dummy text of the', link: '#' },
     { title: 'xpto2', description: 'Lorem Ipsum is simply dummy text of the', link: '#' },
@@ -18,7 +15,7 @@ export const FindMe = () => {
     <Section background="sky">
       <Wrapper>
         <ContentWrapper>
-          <Text variant={isDesktop ? 'Huge' : 'Large'}>Find Me</Text>
+          <Text variant="Large">Find Me</Text>
           <Text>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
