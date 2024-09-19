@@ -1,11 +1,8 @@
-import { useBreakpoints } from '../../shared/hooks/useBreakpoints';
-import { Text } from '../../shared/components/Text';
-import { CardsWrapper, Wrapper } from './styles';
+import { CardsWrapper } from './styles';
 import ProjectCard from './components/ProjectCard';
+import { Section } from '../../shared/components/Section';
 
 export function Projects() {
-  const { isDesktop } = useBreakpoints();
-
   const mockedContent = [
     {
       title: 'Donate',
@@ -38,16 +35,13 @@ export function Projects() {
     },
   ];
 
-  console.log(mockedContent);
-
   return (
-    <Wrapper>
-      <Text variant={isDesktop ? 'Huge' : 'Large'}>Recent projects</Text>
+    <Section background="sky" title="Recent projects">
       <CardsWrapper>
         {mockedContent.map((project) => (
           <ProjectCard {...project} />
         ))}
       </CardsWrapper>
-    </Wrapper>
+    </Section>
   );
 }

@@ -1,18 +1,4 @@
 import { styled } from 'styled-components';
-import { theme } from '../../shared/theme';
-
-export const Wrapper = styled.section`
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  background-color: ${theme.colors.fog};
-  padding: 32px 32px 0px;
-
-  @media (min-width: 1024px) {
-    padding: 5% 12%;
-    gap: 64px;
-  }
-`;
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -29,6 +15,7 @@ export const ContentWrapper = styled.div`
 export const Image = styled.img`
   width: 360px;
   height: 360px;
+  filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.1));
 
   @media (min-width: 1024px) {
     padding-right: 100px;

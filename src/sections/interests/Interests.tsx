@@ -1,15 +1,13 @@
-import { useBreakpoints } from '../../shared/hooks/useBreakpoints';
 import { Text } from '../../shared/components/Text';
 
-import { Block, ContentWrapper, Wrapper } from './styles';
+import { Block, ContentWrapper } from './styles';
 import { theme } from '../../shared/theme';
+import { Section } from '../../shared/components/Section';
 
 export const Interests = () => {
-  const { isDesktop } = useBreakpoints();
 
   return (
-    <Wrapper>
-      <Text variant={isDesktop ? 'Huge' : 'Large'}>Interests</Text>
+    <Section background="fog" title="Interests">
       <ContentWrapper>
         <Block>
           <Text variant="H2" color={theme.colors.evening}>
@@ -32,6 +30,6 @@ export const Interests = () => {
           </Text>
         </Block>
       </ContentWrapper>
-    </Wrapper>
+    </Section>
   );
 };

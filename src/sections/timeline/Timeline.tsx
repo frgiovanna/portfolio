@@ -1,6 +1,5 @@
+import { Section } from '../../shared/components/Section';
 import { useBreakpoints } from '../../shared/hooks/useBreakpoints';
-import { Text } from '../../shared/components/Text';
-import { Wrapper } from './styles';
 import { AlternatingTimeline } from './components/AlternatingTimeline/AlternatingTimeline';
 import RightTimeline from './components/RightTimeline/RightTimeline';
 
@@ -41,9 +40,8 @@ export const Timeline = () => {
   ];
 
   return (
-    <Wrapper>
-      <Text variant={isDesktop ? 'Huge' : 'Large'}>Timeline</Text>
+    <Section background="fog" title="Experience">
       {isDesktop ? <AlternatingTimeline content={mockedContent} /> : <RightTimeline content={mockedContent} />}
-    </Wrapper>
+    </Section>
   );
 };

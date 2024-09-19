@@ -1,13 +1,10 @@
 import styled from 'styled-components';
 import { theme } from '../../../../shared/theme';
 
-export const Box = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 24px;
-  border-radius: 30px;
-  background-color: ${theme.colors.fog};
 `;
 
 export const Header = styled.div`
