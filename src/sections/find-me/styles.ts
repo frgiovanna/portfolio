@@ -4,11 +4,8 @@ import { theme } from '../../shared/theme';
 export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
-  background-color: ${theme.colors.sky};
-  padding: 32px 32px 48px;
 
   @media (min-width: 1024px) {
-    padding: 5% 12%;
     flex-direction: row;
   }
 `;

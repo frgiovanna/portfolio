@@ -1,12 +1,10 @@
-import { useBreakpoints } from '../../shared/hooks/useBreakpoints';
 import { Text } from '../../shared/components/Text';
 
-import { Image, ContentWrapper, Wrapper, SocialMediaWrapper } from './styles';
+import { Image, ContentWrapper, SocialMediaWrapper } from './styles';
 import { SocialMedia } from './components/SocialMedia';
+import { Section } from '../../shared/components/Section';
 
 export const Contact = () => {
-  const { isDesktop } = useBreakpoints();
-
   const socialMedia = [
     {
       image: '/svg/social-media/linkedin.svg',
@@ -29,8 +27,7 @@ export const Contact = () => {
   ];
 
   return (
-    <Wrapper>
-      <Text variant={isDesktop ? 'Huge' : 'Large'}>Contact</Text>
+    <Section background="fog" title="Contact">
       <ContentWrapper>
         <div>
           <Text>
@@ -45,6 +42,6 @@ export const Contact = () => {
         </div>
         <Image src="/svg/waving-avatar.svg" alt="waving avatar" />
       </ContentWrapper>
-    </Wrapper>
+    </Section>
   );
 };
