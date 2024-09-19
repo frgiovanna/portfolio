@@ -4,6 +4,7 @@ import { theme } from '../../../../shared/theme';
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
+  gap: 16px;
   border-radius: 30px;
 `;
 
@@ -21,6 +22,6 @@ export const Icon = styled.div`
 
 export const ContentWrapper = styled.div`
   display: flex;
-  align-items: center;
-  gap: 24px;
+  flex-direction: column;
+  gap: 4px;
 `;
