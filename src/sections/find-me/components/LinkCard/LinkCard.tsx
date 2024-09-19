@@ -10,7 +10,7 @@ export interface LinkCardProps {
 }
 export const LinkCard = ({ link, title, description }: LinkCardProps) => {
   return (
-    <Card>
+    <Card shadow={false}>
       <Wrapper>
         <Icon />
         <ContentWrapper>

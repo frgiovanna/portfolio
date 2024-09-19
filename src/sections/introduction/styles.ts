@@ -10,6 +10,8 @@ export const Image = styled.img`
   width: 456px;
   height: 456px;
 
+  filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.1));
+
   @media (min-width: 1024px) {
     padding-right: 100px;
   }
