@@ -1,8 +1,6 @@
-// import { useBreakpoints } from '../../hooks/useBreakpoints';
 import { theme } from '../../theme';
-import { Wrapper } from './styles';
+import { Container, Wrapper } from './styles';
 import { Text } from '../Text';
-
 interface SectionProps {
   title?: string;
   background: keyof typeof theme.colors;
@@ -10,11 +8,12 @@ interface SectionProps {
 }
 
 export function Section({ background, title, children }: SectionProps) {
-  // const { isDesktop } = useBreakpoints();
   return (
     <Wrapper background={background}>
-      {title && <Text variant="Large">{title}</Text>}
-      {children}
+      <Container>
+        {title && <Text variant="Large">{title}</Text>}
+        {children}
+      </Container>
     </Wrapper>
   );
 }
