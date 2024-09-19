@@ -15,13 +15,13 @@ export const LinksWrapper = styled.div`
   flex-direction: column;
   flex: 1;
   height: fit-content;
-  gap: 32px;
+  gap: 24px;
   margin-top: 24px;
 
   @media (min-width: 1024px) {
     background-color: ${theme.colors.morning};
-    padding: 32px;
-    gap: 32px;
+    padding: 24px;
+    gap: 24px;
     border-radius: 30px;
     margin-top: 0;
   }

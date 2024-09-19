@@ -1,13 +1,10 @@
 import { css, styled } from 'styled-components';
 import { theme } from '../../../shared/theme';
 
-export const Card = styled.section`
-  background-color: ${theme.colors.fog};
-  border-radius: 30px;
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 24px;
 `;
 
 export const ActionsWrapper = styled.div`

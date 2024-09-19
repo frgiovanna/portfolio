@@ -7,7 +7,7 @@ interface WrapperProps {
 
 export const Wrapper = styled.section<WrapperProps>`
   background-color: ${({ background }) => theme.colors[background]};
-  padding: 24px 0;
+  padding: 32px 0;
   width: 100%;
 
   @media (min-width: 1024px) {

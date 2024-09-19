@@ -1,13 +1,10 @@
 import { styled } from 'styled-components';
 import { theme } from '../../../../shared/theme';
 
-export const Card = styled.div`
-  background-color: ${theme.colors.fog};
+export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  padding: 16px 24px 16px 16px;
   border-radius: 30px;
-  justify-content: space-between;
 `;
 
 export const Image = styled.img`
