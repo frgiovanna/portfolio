@@ -8,12 +8,11 @@ export const Link = styled.a`
   border-radius: 30px;
   font-weight: 500;
 
-  &:active {
-    background-color: ${theme.colors.evening};
-    color: ${theme.colors.cloud};
-  }
-
   &:hover {
     background-color: ${theme.colors.light};
+
+    &:active {
+      color: ${theme.colors.twilight};
+    }
   }
 `;
