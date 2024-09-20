@@ -1,6 +1,5 @@
 import { useBreakpoints } from '../../../../shared/hooks/useBreakpoints';
 import { Text } from '../../../../shared/components/Text';
-import { Image } from './styles';
 
 export function Avatar() {
   const { isDesktop } = useBreakpoints();
@@ -9,6 +8,6 @@ export function Avatar() {
       GF
     </Text>
   ) : (
-    <Image src="/svg/smiling-avatar-mobile.svg" alt="avatar" />
+    <img src="/svg/smiling-avatar-mobile.svg" alt="avatar" />
   );
 }
