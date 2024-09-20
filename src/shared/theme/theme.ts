@@ -42,7 +42,7 @@ export const theme = {
     },
   },
   colors: {
-    cloud: '#FFFDFB',
+    cloud: '#FFFFFF',
     dawn: '#3E3E3E',
     evening: '#FE9F9F',
     fog: '#FFF7F0',
