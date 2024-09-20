@@ -36,6 +36,9 @@ export function SectionsMenu({ sections }: SectionsMenuProps) {
         open={open}
         onClose={handleClose}
         sx={{
+          '& .MuiList-root': {
+            backgroundColor: theme.colors.cloud,
+          },
           '& .MuiPaper-root': {
             boxShadow: '0px 1px 4px rgba(0, 0, 0, 0.1)',
             borderRadius: '20px',
@@ -53,7 +56,6 @@ export function SectionsMenu({ sections }: SectionsMenuProps) {
               },
             },
           },
-          color: 'red',
         }}
       >
         {sections.map(({ label, id }) => (
