@@ -21,6 +21,9 @@ const customizedTheme = createTheme({
     secondary: {
       main: theme.colors.night,
     },
+    info: {
+      main: theme.colors.twilight,
+    }
   },
 });
 

@@ -20,7 +20,7 @@ export const LinkCard = ({ link, title, description }: LinkCardProps) => {
         </ContentWrapper>
 
         <a href={link}>
-          <LaunchRoundedIcon color="secondary" sx={{ fontSize: '24px' }} />
+          <LaunchRoundedIcon color="info" sx={{ fontSize: '24px' }} />
         </a>
       </Wrapper>
     </Card>
