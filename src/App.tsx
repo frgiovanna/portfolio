@@ -18,6 +18,9 @@ const customizedTheme = createTheme({
     primary: {
       main: theme.colors.morning,
     },
+    secondary: {
+      main: theme.colors.night,
+    },
   },
 });
 

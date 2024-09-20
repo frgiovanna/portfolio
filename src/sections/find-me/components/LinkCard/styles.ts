@@ -8,11 +8,6 @@ export const Wrapper = styled.div`
   border-radius: 30px;
 `;
 
-export const Image = styled.img`
-  width: 24px;
-  height: 24px;
-`;
-
 export const Icon = styled.div`
   background-color: ${theme.colors.evening};
   min-width: 60px;

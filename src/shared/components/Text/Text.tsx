@@ -1,15 +1,17 @@
-
+import { theme } from '../../theme';
 import { Body, H1, H2, H3, Huge, Large } from './styles';
 
 type Variant = 'H1' | 'H2' | 'H3' | 'Huge' | 'Large' | 'Body';
 
 interface TextProps {
   children: React.ReactNode;
-  color?: string;
+  color?: keyof typeof theme.colors;
   variant?: Variant;
+  fontSize?: string;
+  lineHeight?: string;
 }
 
-export const Text = ({ children, color, variant = 'Body' }: TextProps) => {
+export const Text = ({ children, color, variant = 'Body', fontSize, lineHeight }: TextProps) => {
   const setup = {
     H1: H1,
     H2: H2,
@@ -21,7 +23,11 @@ export const Text = ({ children, color, variant = 'Body' }: TextProps) => {
 
   const Component = setup[variant];
 
-  return <Component color={color}>{children}</Component>;
+  return (
+    <Component color={color} fontSize={fontSize} lineHeight={lineHeight}>
+      {children}
+    </Component>
+  );
 };
 
 // ***** Dot notation approach

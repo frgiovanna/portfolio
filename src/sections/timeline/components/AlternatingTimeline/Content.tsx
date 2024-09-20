@@ -1,7 +1,6 @@
 import TimelineContent from '@mui/lab/TimelineContent';
 import { ContentWrapper, HorizontalLine, TextWrapper } from './styles';
 import { Text } from '../../../../shared/components/Text';
-import { theme } from '../../../../shared/theme';
 
 interface ContentProps {
   position: 'left' | 'right';
@@ -15,7 +14,7 @@ export const Content = ({ position, title, description, duration }: ContentProps
     <TimelineContent sx={{ py: 0 }}>
       <ContentWrapper position={position}>
         <TextWrapper>
-          <Text variant="H2" color={theme.colors.twilight}>
+          <Text variant="H2" color="twilight">
             {title} <span style={{ fontSize: '16px' }}>{duration}</span>
           </Text>
           <div style={{ textAlign: 'justify' }}>

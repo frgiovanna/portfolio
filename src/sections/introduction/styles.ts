@@ -4,6 +4,7 @@ export const Wrapper = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 72px;
 `;
 
 export const Image = styled.img`
