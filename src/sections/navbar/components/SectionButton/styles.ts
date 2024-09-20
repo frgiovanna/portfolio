@@ -8,7 +8,7 @@ export const Link = styled.a`
   border-radius: 30px;
   font-weight: 500;
 
-  &:focus {
+  &:active {
     background-color: ${theme.colors.evening};
     color: ${theme.colors.cloud};
   }

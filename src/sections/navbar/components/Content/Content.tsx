@@ -1,8 +1,7 @@
 import { useBreakpoints } from '../../../../shared/hooks/useBreakpoints';
 import { SectionButton } from '../SectionButton';
+import { SectionsMenu } from './SectionsMenu';
 import { SectionsWrapper } from './styles';
-
-import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
 const sections = [
   { label: 'Introduction', id: 'introduction' },
@@ -27,5 +26,5 @@ export function Content() {
     );
   }
 
-  return <MenuRoundedIcon sx={{ fontSize: '42px' }} color="secondary" />;
+  return <SectionsMenu sections={sections} />;
 }
