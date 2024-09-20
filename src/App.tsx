@@ -7,8 +7,8 @@ import { Timeline } from './sections/timeline';
 import { Projects } from './sections/projects';
 
 import { createTheme, ThemeProvider } from '@mui/material';
-import { Navbar } from './sections/navbar';
 import { theme } from './shared/theme';
+import { Navbar } from './sections/navbar/Navbar';
 
 const customizedTheme = createTheme({
   typography: {
@@ -23,7 +23,7 @@ const customizedTheme = createTheme({
     },
     info: {
       main: theme.colors.twilight,
-    }
+    },
   },
 });
 

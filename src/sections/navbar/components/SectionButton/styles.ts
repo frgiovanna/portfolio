@@ -12,4 +12,8 @@ export const Link = styled.a`
     background-color: ${theme.colors.evening};
     color: ${theme.colors.cloud};
   }
+
+  &:hover {
+    background-color: #fedbdb;
+  }
 `;

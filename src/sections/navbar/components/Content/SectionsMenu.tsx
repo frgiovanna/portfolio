@@ -42,14 +42,14 @@ export function SectionsMenu({ sections }: SectionsMenuProps) {
             '& .MuiMenuItem-root': {
               color: 'secondary',
               '&:not(:last-child)': {
-                borderBottom: `1px solid #FFDFDF`,
+                borderBottom: `1px solid #FEDBDB`,
               },
               fontWeight: 500,
               '&:hover': {
                 backgroundColor: theme.colors.fog,
               },
               '&:active': {
-                backgroundColor: '#FFDFDF',
+                backgroundColor: '#FEDBDB',
               },
             },
           },
