@@ -17,7 +17,6 @@ export const LinksWrapper = styled.div`
   height: fit-content;
   gap: 24px;
   margin-top: 24px;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
 
   @media (min-width: 1024px) {
     background-color: ${theme.colors.morning};
@@ -25,6 +24,7 @@ export const LinksWrapper = styled.div`
     gap: 24px;
     border-radius: 30px;
     margin-top: 0;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
   }
 `;
 

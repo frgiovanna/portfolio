@@ -40,7 +40,7 @@ export const Timeline = () => {
   ];
 
   return (
-    <Section background="fog" title="Experience">
+    <Section background="fog" title="Experience" id="timeline">
       {isDesktop ? <AlternatingTimeline content={mockedContent} /> : <RightTimeline content={mockedContent} />}
     </Section>
   );

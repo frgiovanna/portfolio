@@ -43,7 +43,7 @@ export const Skills = () => {
   ];
 
   return (
-    <Section background="morning" title="Skills">
+    <Section background="morning" title="Skills" id="skills">
       <CardsWrapper>
         {skills.map((skill) => (
           <SkillCard {...skill} />

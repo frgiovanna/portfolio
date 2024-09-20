@@ -27,7 +27,7 @@ export const Contact = () => {
   ];
 
   return (
-    <Section background="fog" title="Contact">
+    <Section background="fog" title="Contact" id="contact">
       <ContentWrapper>
         <div>
           <Text>

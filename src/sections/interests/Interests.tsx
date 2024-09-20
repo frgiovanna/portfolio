@@ -1,16 +1,14 @@
 import { Text } from '../../shared/components/Text';
 
 import { Block, ContentWrapper } from './styles';
-import { theme } from '../../shared/theme';
 import { Section } from '../../shared/components/Section';
 
 export const Interests = () => {
-
   return (
-    <Section background="fog" title="Interests">
+    <Section background="fog" title="Interests" id="interests">
       <ContentWrapper>
         <Block>
-          <Text variant="H2" color={theme.colors.evening}>
+          <Text variant="H2" color="evening">
             Liderança
           </Text>
           <Text>
@@ -20,7 +18,7 @@ export const Interests = () => {
           </Text>
         </Block>
         <Block>
-          <Text variant="H2" color={theme.colors.evening}>
+          <Text variant="H2" color="evening">
             Liderança
           </Text>
           <Text>

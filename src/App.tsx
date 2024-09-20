@@ -7,16 +7,30 @@ import { Timeline } from './sections/timeline';
 import { Projects } from './sections/projects';
 
 import { createTheme, ThemeProvider } from '@mui/material';
+import { Navbar } from './sections/navbar';
+import { theme } from './shared/theme';
 
-const theme = createTheme({
+const customizedTheme = createTheme({
   typography: {
     fontFamily: 'Montserrat, sans-serif',
+  },
+  palette: {
+    primary: {
+      main: theme.colors.morning,
+    },
+    secondary: {
+      main: theme.colors.night,
+    },
+    info: {
+      main: theme.colors.twilight,
+    }
   },
 });
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={customizedTheme}>
+      <Navbar />
       <Introduction />
       <Timeline />
       <FindMe />

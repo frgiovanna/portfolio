@@ -36,7 +36,7 @@ export function Projects() {
   ];
 
   return (
-    <Section background="sky" title="Recent projects">
+    <Section background="sky" title="Recent projects" id="projects">
       <CardsWrapper>
         {mockedContent.map((project) => (
           <ProjectCard {...project} />

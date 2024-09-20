@@ -1,6 +1,7 @@
 import { Card } from '../../../../shared/components/Card';
 import { Text } from '../../../../shared/components/Text';
-import { Wrapper, Image, Icon, ContentWrapper } from './styles';
+import { Wrapper, Icon, ContentWrapper } from './styles';
+import LaunchRoundedIcon from '@mui/icons-material/LaunchRounded';
 
 export interface LinkCardProps {
   link: string;
@@ -19,7 +20,7 @@ export const LinkCard = ({ link, title, description }: LinkCardProps) => {
         </ContentWrapper>
 
         <a href={link}>
-          <Image src="/svg/external-link.svg" alt="image" />
+          <LaunchRoundedIcon color="info" sx={{ fontSize: '24px' }} />
         </a>
       </Wrapper>
     </Card>

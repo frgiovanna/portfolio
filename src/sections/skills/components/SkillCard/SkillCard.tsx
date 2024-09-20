@@ -1,6 +1,5 @@
 import { Wrapper, Header, HeaderContent, Icon } from './styles';
 import { Text } from '../../../../shared/components/Text';
-import { theme } from '../../../../shared/theme';
 import { Card } from '../../../../shared/components/Card';
 
 interface SkillCardProps {
@@ -16,10 +15,10 @@ export const SkillCard = ({ title, level, description }: SkillCardProps) => {
         <Header>
           <Icon />
           <HeaderContent>
-            <Text variant="H2" color={theme.colors.night}>
+            <Text variant="H2" color="night">
               {title}
             </Text>
-            <Text color={theme.colors.night}>{level}</Text>
+            <Text color="night">{level}</Text>
           </HeaderContent>
         </Header>
         <Text>{description}</Text>

@@ -47,7 +47,7 @@ export const Button = styled.a<ButtonProps>`
         `}
 
   &:hover,
-          &:focus {
+    &:active {
     background-color: ${theme.colors.morning};
     color: ${theme.colors.cloud};
   }

@@ -12,7 +12,7 @@ export const FindMe = () => {
   ];
 
   return (
-    <Section background="sky">
+    <Section background="sky" id="find-me">
       <Wrapper>
         <ContentWrapper>
           <Text variant="Large">Find Me</Text>

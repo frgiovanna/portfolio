@@ -6,7 +6,7 @@ import { Image, ContentWrapper, Wrapper } from './styles';
 export const Introduction = () => {
   const { isDesktop } = useBreakpoints();
   return (
-    <Section background="morning">
+    <Section background="morning" id="introduction">
       <Wrapper>
         {isDesktop && <Image src="/svg/smiling-avatar.svg" alt="image" />}
         <ContentWrapper>
