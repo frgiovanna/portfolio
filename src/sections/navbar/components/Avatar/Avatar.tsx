@@ -9,6 +9,6 @@ export function Avatar() {
       GF
     </Text>
   ) : (
-    <Image src="/svg/smiling-avatar.svg" alt="avatar" />
+    <Image src="/svg/smiling-avatar-mobile.svg" alt="avatar" />
   );
 }
