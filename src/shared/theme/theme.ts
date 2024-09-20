@@ -51,6 +51,7 @@ export const theme = {
     night: '#10375E',
     sky: '#D0E5FA',
     twilight: '#1D63A6',
+    light: '#ffdfdf',
   },
   fontFamily: {
     abrilFatFace: "'Abril Fatface', cursive",

@@ -14,6 +14,6 @@ export const Link = styled.a`
   }
 
   &:hover {
-    background-color: #fedbdb;
+    background-color: ${theme.colors.light};
   }
 `;
