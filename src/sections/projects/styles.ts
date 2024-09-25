@@ -7,7 +7,7 @@ export const CardsWrapper = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
   @media (min-width: 408px) {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   }
 
   @media (min-width: 1024px) {
