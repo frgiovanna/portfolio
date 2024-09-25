@@ -1,23 +1,18 @@
-import styled from '@emotion/styled';
-
-export const SectionsWrapper = styled.div`
-  display: flex;
-  gap: 24px;
-`;
+import styled from "@emotion/styled";
 
 export const Hider = styled.div`
-  div {
+  h1 {
     display: none;
   }
-  button {
+  img {
     display: block;
   }
 
   @media (min-width: 1024px) {
-    div {
+    h1 {
       display: block;
     }
-    button {
+    img {
       display: none;
     }
   }

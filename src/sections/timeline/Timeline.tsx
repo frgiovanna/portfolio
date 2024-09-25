@@ -1,11 +1,9 @@
-import useMediaQuery from '@mui/material/useMediaQuery';
 import { Section } from '../../shared/components/Section';
 import { AlternatingTimeline } from './components/AlternatingTimeline/AlternatingTimeline';
 import RightTimeline from './components/RightTimeline/RightTimeline';
+import { Hider } from './styles';
 
 export const Timeline = () => {
-  const isDesktop = useMediaQuery('(min-width:1024px)');
-
   const mockedContent = [
     {
       title: 'Ismart online',
@@ -41,7 +39,10 @@ export const Timeline = () => {
 
   return (
     <Section background="fog" title="Experience" id="timeline">
-      {isDesktop ? <AlternatingTimeline content={mockedContent} /> : <RightTimeline content={mockedContent} />}
+      <Hider>
+        <AlternatingTimeline content={mockedContent} />
+        <RightTimeline content={mockedContent} />
+      </Hider>
     </Section>
   );
 };

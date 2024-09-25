@@ -26,8 +26,8 @@ export function SectionsMenu({ sections }: SectionsMenuProps) {
   }
 
   return (
-    <div>
-      <IconButton aria-label="delete" onClick={handleClick}>
+    <>
+      <IconButton aria-label="delete" onClick={handleClick} sx={{ display: 'flex' }}>
         <MenuRoundedIcon sx={{ fontSize: '42px' }} color="secondary" />
       </IconButton>
       <Menu
@@ -64,6 +64,6 @@ export function SectionsMenu({ sections }: SectionsMenuProps) {
           </MenuItem>
         ))}
       </Menu>
-    </div>
+    </>
   );
 }

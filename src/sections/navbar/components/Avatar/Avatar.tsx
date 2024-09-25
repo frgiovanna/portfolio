@@ -1,14 +1,15 @@
 import { Text } from '../../../../shared/components/Text';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import { Hider } from './styles';
 
 export function Avatar() {
-  const isDesktop = useMediaQuery('(min-width:1024px)');
 
-  return isDesktop ? (
-    <Text variant="Large" fontSize="40px">
-      GF
-    </Text>
-  ) : (
-    <img src="/svg/smiling-avatar-mobile.svg" alt="avatar" />
+  return (
+    <Hider>
+      <Text variant="Large" fontSize="40px">
+        GF
+      </Text>
+
+      <img src="/svg/smiling-avatar-mobile.svg" alt="avatar" />
+    </Hider>
   );
 }

@@ -14,3 +14,21 @@ export const Connector = styled.div`
   width: 24px;
   flex-grow: 1;
 `;
+
+export const Hider = styled.div`
+  #alternating-timeline {
+    display: none;
+  }
+  #right-timeline {
+    display: block;
+  }
+
+  @media (min-width: 1024px) {
+    #alternating-timeline {
+      display: block;
+    }
+    #right-timeline {
+      display: none;
+    }
+  }
+`;
