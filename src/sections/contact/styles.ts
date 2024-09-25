@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 
-export const ContentWrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 8px;
 
   @media (min-width: 1024px) {
     flex-direction: row;
@@ -14,9 +14,10 @@ export const ContentWrapper = styled.div`
 
 export const Image = styled.img`
   width: 100%;
+
   filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.1));
   align-self: center;
-  margin-bottom: -48px;
+  margin-bottom: -32px;
 
   @media (min-width: 480px) {
     width: 320px;
@@ -30,9 +31,9 @@ export const Image = styled.img`
   }
 `;
 
-export const SocialMediaWrapper = styled.div`
+
+export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin-top: 64px;
 `;

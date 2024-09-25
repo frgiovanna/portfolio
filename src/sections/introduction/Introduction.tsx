@@ -6,7 +6,7 @@ export const Introduction = () => {
   return (
     <Section background="morning" id="introduction">
       <Wrapper>
-        <Image src="/svg/smiling-avatar.svg" alt="image" />
+        <Image src="/png/avatar/smiling-avatar.png" alt="image" />
         <ContentWrapper>
           <Text variant="Huge">Olá, meu nome é Giovanna Freitas</Text>
           <Text>
