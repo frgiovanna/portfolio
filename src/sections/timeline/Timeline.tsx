@@ -1,10 +1,10 @@
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { Section } from '../../shared/components/Section';
-import { useBreakpoints } from '../../shared/hooks/useBreakpoints';
 import { AlternatingTimeline } from './components/AlternatingTimeline/AlternatingTimeline';
 import RightTimeline from './components/RightTimeline/RightTimeline';
 
 export const Timeline = () => {
-  const { isDesktop } = useBreakpoints();
+  const isDesktop = useMediaQuery('(min-width:1024px)');
 
   const mockedContent = [
     {

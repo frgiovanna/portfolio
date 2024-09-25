@@ -1,4 +1,4 @@
-import { styled } from 'styled-components';
+import styled from '@emotion/styled';
 
 export const Wrapper = styled.section`
   display: flex;
@@ -8,12 +8,14 @@ export const Wrapper = styled.section`
 `;
 
 export const Image = styled.img`
-  width: 456px;
-  height: 456px;
-
-  filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.1));
-
+  display: none;
   @media (min-width: 1024px) {
+    display: block;
+
+    width: 456px;
+    height: 456px;
+
+    filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.1));
     padding-right: 100px;
   }
 `;

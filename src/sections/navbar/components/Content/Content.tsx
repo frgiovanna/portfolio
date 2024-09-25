@@ -1,4 +1,4 @@
-import { useBreakpoints } from '../../../../shared/hooks/useBreakpoints';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { SectionButton } from '../SectionButton';
 import { SectionsMenu } from './SectionsMenu';
 import { SectionsWrapper } from './styles';
@@ -14,7 +14,7 @@ const sections = [
 ];
 
 export function Content() {
-  const { isDesktop } = useBreakpoints();
+  const isDesktop = useMediaQuery('(min-width:1024px)');
 
   if (isDesktop) {
     return (

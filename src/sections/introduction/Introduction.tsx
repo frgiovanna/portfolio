@@ -1,14 +1,12 @@
 import { Section } from '../../shared/components/Section';
 import { Text } from '../../shared/components/Text';
-import { useBreakpoints } from '../../shared/hooks/useBreakpoints';
 import { Image, ContentWrapper, Wrapper } from './styles';
 
 export const Introduction = () => {
-  const { isDesktop } = useBreakpoints();
   return (
     <Section background="morning" id="introduction">
       <Wrapper>
-        {isDesktop && <Image src="/svg/smiling-avatar.svg" alt="image" />}
+        <Image src="/svg/smiling-avatar.svg" alt="image" />
         <ContentWrapper>
           <Text variant="Huge">Olá, meu nome é Giovanna Freitas</Text>
           <Text>

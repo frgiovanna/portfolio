@@ -1,4 +1,4 @@
-import { styled } from 'styled-components';
+import styled from '@emotion/styled';
 import { theme } from '../../shared/theme';
 
 export const Dot = styled.div`
@@ -8,7 +8,6 @@ export const Dot = styled.div`
   width: 24px;
   height: 24px;
 `;
-
 
 export const Connector = styled.div`
   background-color: ${theme.colors.morning};

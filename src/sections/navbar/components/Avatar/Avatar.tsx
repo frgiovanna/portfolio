@@ -1,8 +1,9 @@
-import { useBreakpoints } from '../../../../shared/hooks/useBreakpoints';
 import { Text } from '../../../../shared/components/Text';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export function Avatar() {
-  const { isDesktop } = useBreakpoints();
+  const isDesktop = useMediaQuery('(min-width:1024px)');
+
   return isDesktop ? (
     <Text variant="Large" fontSize="40px">
       GF
