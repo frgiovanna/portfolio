@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 export const Hider = styled.div`
   h1 {
@@ -16,4 +16,8 @@ export const Hider = styled.div`
       display: none;
     }
   }
+`;
+
+export const Image = styled.img`
+  width: 40px;
 `;

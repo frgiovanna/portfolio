@@ -1,5 +1,5 @@
 import { Text } from '../../../../shared/components/Text';
-import { Hider } from './styles';
+import { Hider, Image } from './styles';
 
 export function Avatar() {
 
@@ -9,7 +9,7 @@ export function Avatar() {
         GF
       </Text>
 
-      <img src="/svg/smiling-avatar-mobile.svg" alt="avatar" />
+      <Image src="/png/avatar/smiling-avatar.png" alt="avatar" />
     </Hider>
   );
 }

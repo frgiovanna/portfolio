@@ -1,25 +1,25 @@
 import { Text } from '../../shared/components/Text';
 
-import { Image, ContentWrapper, SocialMediaWrapper } from './styles';
+import { Image, ContentWrapper, Wrapper } from './styles';
 import { SocialMedia } from './components/SocialMedia';
 import { Section } from '../../shared/components/Section';
 
 export const Contact = () => {
   const socialMedia = [
     {
-      image: '/svg/social-media/linkedin.svg',
+      image: '/png/social-media/linkedin.png',
       link: 'https://www.linkedin.com/in/frgiovanna/',
       title: 'LinkedIn',
       subtitle: 'linkedin.com/in/frgiovanna',
     },
     {
-      image: '/svg/social-media/github.svg',
+      image: '/png/social-media/github.png',
       link: 'https://github.com/frgiovanna',
       title: 'Github',
       subtitle: 'github.com/frgiovanna',
     },
     {
-      image: '/svg/social-media/email.svg',
+      image: '/png/social-media/email.png',
       link: 'mailto:giovannacnf@gmail.com',
       title: 'E-mail',
       subtitle: 'giovannacnf@gmail.com',
@@ -28,20 +28,20 @@ export const Contact = () => {
 
   return (
     <Section background="fog" title="Contact" id="contact">
-      <ContentWrapper>
-        <div>
+      <Wrapper>
+        <ContentWrapper>
           <Text>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500saaaaaa.
           </Text>
-          <SocialMediaWrapper>
+          <ContentWrapper>
             {socialMedia.map((item) => (
               <SocialMedia key={item.image} {...item} />
             ))}
-          </SocialMediaWrapper>
-        </div>
-        <Image src="/svg/waving-avatar.svg" alt="waving avatar" />
-      </ContentWrapper>
+          </ContentWrapper>
+        </ContentWrapper>
+        <Image src="/png/avatar/waving-avatar.png" alt="waving avatar" />
+      </Wrapper>
     </Section>
   );
 };
