@@ -1,11 +1,9 @@
 import { Section } from '../../shared/components/Section';
-import { useBreakpoints } from '../../shared/hooks/useBreakpoints';
 import { AlternatingTimeline } from './components/AlternatingTimeline/AlternatingTimeline';
 import RightTimeline from './components/RightTimeline/RightTimeline';
+import { Hider } from './styles';
 
 export const Timeline = () => {
-  const { isDesktop } = useBreakpoints();
-
   const mockedContent = [
     {
       title: 'Ismart online',
@@ -41,7 +39,10 @@ export const Timeline = () => {
 
   return (
     <Section background="fog" title="Experience" id="timeline">
-      {isDesktop ? <AlternatingTimeline content={mockedContent} /> : <RightTimeline content={mockedContent} />}
+      <Hider>
+        <AlternatingTimeline content={mockedContent} />
+        <RightTimeline content={mockedContent} />
+      </Hider>
     </Section>
   );
 };

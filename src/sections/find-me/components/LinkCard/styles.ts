@@ -1,4 +1,4 @@
-import { styled } from 'styled-components';
+import styled from '@emotion/styled';
 import { theme } from '../../../../shared/theme';
 
 export const Wrapper = styled.div`
@@ -9,10 +9,15 @@ export const Wrapper = styled.div`
 `;
 
 export const Icon = styled.div`
-  background-color: ${theme.colors.evening};
-  min-width: 60px;
-  min-height: 60px;
-  border-radius: 30px;
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: block;
+    background-color: ${theme.colors.evening};
+    border-radius: 30px;
+    min-width: 60px;
+    min-height: 60px;
+  }
 `;
 
 export const ContentWrapper = styled.div`

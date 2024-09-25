@@ -14,7 +14,7 @@ interface AlternatingTimelineProps {
 
 export const AlternatingTimeline = ({ content }: AlternatingTimelineProps) => {
   return (
-    <Timeline position="alternate-reverse">
+    <Timeline position="alternate-reverse" id="alternating-timeline">
       {content.map(({ title, description, duration }, index) => {
         const isFirstItem = index === 0;
         const isLeftContent = index % 2 === 0;

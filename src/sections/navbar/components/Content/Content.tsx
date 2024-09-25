@@ -1,7 +1,6 @@
-import { useBreakpoints } from '../../../../shared/hooks/useBreakpoints';
 import { SectionButton } from '../SectionButton';
 import { SectionsMenu } from './SectionsMenu';
-import { SectionsWrapper } from './styles';
+import { Hider, SectionsWrapper } from './styles';
 
 const sections = [
   { label: 'Introduction', id: 'introduction' },
@@ -14,17 +13,14 @@ const sections = [
 ];
 
 export function Content() {
-  const { isDesktop } = useBreakpoints();
-
-  if (isDesktop) {
-    return (
+  return (
+    <Hider>
       <SectionsWrapper>
         {sections.map(({ label, id }) => (
           <SectionButton key={id} label={label} sectionId={id} />
         ))}
       </SectionsWrapper>
-    );
-  }
-
-  return <SectionsMenu sections={sections} />;
+      <SectionsMenu sections={sections} />
+    </Hider>
+  );
 }

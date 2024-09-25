@@ -4,6 +4,7 @@ import { useScrollTrigger, Slide } from '@mui/material';
 import { Toolbar } from './styles';
 import { Avatar } from './components/Avatar';
 import { Content } from './components/Content';
+
 function HideOnScroll({ children }: { children: React.ReactElement }) {
   const trigger = useScrollTrigger();
 

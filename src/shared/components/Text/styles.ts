@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { theme } from '../../theme';
 
 type Props = { color?: keyof typeof theme.colors; fontSize?: string; lineHeight?: string };
@@ -20,9 +20,14 @@ export const Huge = styled.h1<Props>`
 export const Large = styled.h1<Props>`
   margin: 0;
   font-family: ${theme.fontFamily.abrilFatFace};
-  font-size: ${({ fontSize }) => fontSize || '56px'};
-  line-height: ${({ lineHeight }) => lineHeight || '56px'};
+  font-size: ${({ fontSize }) => fontSize || '48px'};
+  line-height: ${({ lineHeight }) => lineHeight || '48px'};
   color: ${({ color }) => (color ? theme.colors[color] : theme.colors.night)};
+
+  @media (min-width: 480px) {
+    font-size: ${({ fontSize }) => fontSize || '56px'};
+    line-height: ${({ lineHeight }) => lineHeight || '56px'};
+  }
 
   @media (min-width: 1024px) {
     font-size: ${({ fontSize }) => fontSize || '64px'};

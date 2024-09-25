@@ -15,6 +15,7 @@ export default function RightTimeline({ content }: RightTimelineProps) {
   return (
     <Timeline
       position="right"
+      id="right-timeline"
       sx={{
         [`& .${timelineItemClasses.root}:before`]: {
           flex: 0,

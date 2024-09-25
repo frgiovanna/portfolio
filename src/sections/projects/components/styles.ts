@@ -1,4 +1,6 @@
-import { css, styled } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
+
 import { theme } from '../../../shared/theme';
 
 export const Wrapper = styled.div`

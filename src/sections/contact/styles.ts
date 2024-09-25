@@ -1,4 +1,4 @@
-import { styled } from 'styled-components';
+import styled from '@emotion/styled';
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -13,12 +13,20 @@ export const ContentWrapper = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 360px;
-  height: 360px;
+  width: 100%;
   filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.1));
+  align-self: center;
+  margin-bottom: -48px;
+
+  @media (min-width: 480px) {
+    width: 320px;
+    height: 320px;
+  }
 
   @media (min-width: 1024px) {
-    padding-right: 100px;
+    width: 360px;
+    height: 360px;
+    margin-bottom: unset;
   }
 `;
 
