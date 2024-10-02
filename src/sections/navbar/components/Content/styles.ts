@@ -10,12 +10,12 @@ export const Hider = styled.div`
     display: none;
   }
   button {
-    display: block;
+    display: flex;
   }
 
   @media (min-width: 1024px) {
     div {
-      display: block;
+      display: flex;
     }
     button {
       display: none;

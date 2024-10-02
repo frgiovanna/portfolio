@@ -1,8 +1,13 @@
 import { CardsWrapper } from './styles';
 import ProjectCard from './components/ProjectCard';
 import { Section } from '../../shared/components/Section';
+import { useContentContext } from '../../shared/providers/ContentProvider';
 
 export function Projects() {
+  const {
+    content: { projects },
+  } = useContentContext();
+
   const mockedContent = [
     {
       title: 'Donate',
@@ -34,6 +39,10 @@ export function Projects() {
       demo: '#linkDemoHere',
     },
   ];
+
+  if (!projects) {
+    return null;
+  }
 
   return (
     <Section background="sky" title="Recent projects" id="projects">

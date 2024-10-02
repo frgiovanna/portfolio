@@ -2,31 +2,24 @@ import { Text } from '../../shared/components/Text';
 
 import { Block, ContentWrapper } from './styles';
 import { Section } from '../../shared/components/Section';
+import { useContentContext } from '../../shared/providers/ContentProvider';
 
 export const Interests = () => {
+  const {
+    content: { interests, navbar },
+  } = useContentContext();
+
   return (
-    <Section background="fog" title="Interests" id="interests">
+    <Section background="fog" title={navbar.interests.label} id={navbar.interests.id}>
       <ContentWrapper>
-        <Block>
-          <Text variant="H2" color="evening">
-            Liderança
-          </Text>
-          <Text>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap{' '}
-          </Text>
-        </Block>
-        <Block>
-          <Text variant="H2" color="evening">
-            Liderança
-          </Text>
-          <Text>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap{' '}
-          </Text>
-        </Block>
+        {interests.items.map(({ title, description }) => (
+          <Block>
+            <Text variant="H2" color="evening">
+              {title}
+            </Text>
+            <Text>{description}</Text>
+          </Block>
+        ))}
       </ContentWrapper>
     </Section>
   );

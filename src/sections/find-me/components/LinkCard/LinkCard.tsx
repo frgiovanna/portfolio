@@ -1,22 +1,23 @@
 import { Card } from '../../../../shared/components/Card';
 import { Text } from '../../../../shared/components/Text';
-import { Wrapper, Icon, ContentWrapper } from './styles';
+import { Wrapper, Image, ContentWrapper } from './styles';
 import LaunchRoundedIcon from '@mui/icons-material/LaunchRounded';
 
-export interface LinkCardProps {
+interface LinkCardProps {
   link: string;
   icon?: string;
   title: string;
-  description: string;
+  headline: string;
+  image: string;
 }
-export const LinkCard = ({ link, title, description }: LinkCardProps) => {
+export const LinkCard = ({ link, title, headline, image }: LinkCardProps) => {
   return (
     <Card shadow={false}>
       <Wrapper>
-        <Icon />
+        <Image src={image} />
         <ContentWrapper>
           <Text variant="H2">{title}</Text>
-          <Text>{description}</Text>
+          <Text fontWeight={600}>{headline}</Text>
         </ContentWrapper>
 
         <a href={link}>

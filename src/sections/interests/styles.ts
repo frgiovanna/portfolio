@@ -4,6 +4,8 @@ export const Block = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+  flex: 1;
+  max-width: 480px;
 `;
 
 export const ContentWrapper = styled.div`

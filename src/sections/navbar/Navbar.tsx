@@ -18,7 +18,7 @@ function HideOnScroll({ children }: { children: React.ReactElement }) {
 export function Navbar() {
   return (
     <HideOnScroll>
-      <AppBar sx={{ boxShadow: '0px 1px 4px rgba(0, 0, 0, 0.1)'}}>
+      <AppBar sx={{ boxShadow: '0px 1px 4px rgba(0, 0, 0, 0.1)' }}>
         <Container>
           <Toolbar>
             <Avatar />
