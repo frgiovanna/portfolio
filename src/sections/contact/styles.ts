@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 
   @media (min-width: 1024px) {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     gap: 180px;
   }
 `;
@@ -23,7 +23,7 @@ export const Image = styled.img`
   }
 
   @media (min-width: 1024px) {
-    width: 380px;
+    width: 440px;
     margin-bottom: unset;
     padding: unset;
   }

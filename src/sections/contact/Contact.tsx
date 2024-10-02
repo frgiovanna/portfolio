@@ -11,9 +11,10 @@ export const Contact = () => {
   } = useContentContext();
 
   return (
-    <Section background="fog" title={navbar.contact.label} id={navbar.contact.id}>
+    <Section background="fog" id={navbar.contact.id}>
       <Wrapper>
         <ContentWrapper>
+          <Text variant="Large">{navbar.contact.label}</Text>
           <DescriptionWrapper>
             <Text>{contact.description}</Text>
           </DescriptionWrapper>
