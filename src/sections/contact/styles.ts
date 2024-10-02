@@ -16,16 +16,16 @@ export const Image = styled.img`
   width: 100%;
 
   margin-bottom: -32px;
+  padding: 24px;
 
   @media (min-width: 480px) {
     width: 320px;
-    height: 320px;
   }
 
   @media (min-width: 1024px) {
-    width: 400px;
-    height: 400px;
+    width: 380px;
     margin-bottom: unset;
+    padding: unset;
   }
 `;
 
@@ -40,7 +40,6 @@ export const LinksWrapper = styled.div`
   flex-direction: column;
   gap: 32px;
 `;
-
 
 export const DescriptionWrapper = styled.div`
   max-width: 400px;
