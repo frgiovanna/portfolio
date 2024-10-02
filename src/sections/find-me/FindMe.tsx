@@ -1,32 +1,27 @@
 import { Section } from '../../shared/components/Section';
 import { Text } from '../../shared/components/Text';
-import { LinkCard, LinkCardProps } from './components/LinkCard';
-import { Wrapper, LinksWrapper, ContentWrapper } from './styles';
+import { useContentContext } from '../../shared/providers/ContentProvider';
+import { LinkCard } from './components/LinkCard';
+import { Wrapper, LinksWrapper, ContentWrapper, DescriptionWrapper } from './styles';
 
 export const FindMe = () => {
-  const magazines: LinkCardProps[] = [
-    { title: 'xpto1', description: 'Lorem Ipsum is simply dummy text of the', link: '#' },
-    { title: 'xpto2', description: 'Lorem Ipsum is simply dummy text of the', link: '#' },
-    { title: 'xpto3', description: 'Lorem Ipsum is simply dummy text of the', link: '#' },
-    { title: 'xpto4', description: 'Lorem Ipsum is simply dummy text of the', link: '#' },
-  ];
+  const {
+    content: { findMe, navbar },
+  } = useContentContext();
 
   return (
-    <Section background="sky" id="find-me">
+    <Section background="sky" id={navbar.findMe.id}>
       <Wrapper>
         <ContentWrapper>
-          <Text variant="Large">Find Me</Text>
-          <Text>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.
-          </Text>
+          <Text variant="Large">{navbar.findMe.label}</Text>
+          <DescriptionWrapper>
+            <Text>{findMe.description.lineOne}</Text>
+            <Text>{findMe.description.lineTwo}</Text>
+            <Text>{findMe.description.lineThree}</Text>
+          </DescriptionWrapper>
         </ContentWrapper>
         <LinksWrapper>
-          {magazines.map((magazine) => (
+          {findMe.magazines.map((magazine) => (
             <LinkCard {...magazine} />
           ))}
         </LinksWrapper>

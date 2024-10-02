@@ -9,11 +9,10 @@
   "search.exclude": {
     ".DS_Store": true,
     "node_modules": true,
-    "node_modules/**": true,
+    "node_modules/**": true
   },
-  "[mdx]": {
-    "editor.wordWrap": "on"
-  },
+
+  "editor.wordWrap": "on",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"

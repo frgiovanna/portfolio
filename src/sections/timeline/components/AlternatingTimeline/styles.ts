@@ -22,3 +22,9 @@ export const TextWrapper = styled.div`
   gap: 16px;
   flex: 3;
 `;
+
+export const TitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;

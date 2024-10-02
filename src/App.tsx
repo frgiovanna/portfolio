@@ -9,6 +9,7 @@ import { Projects } from './sections/projects';
 import { createTheme, ThemeProvider } from '@mui/material';
 import { theme } from './shared/theme';
 import { Navbar } from './sections/navbar/Navbar';
+import { ContentProvider } from './shared/providers/ContentProvider';
 
 const customizedTheme = createTheme({
   typography: {
@@ -30,14 +31,16 @@ const customizedTheme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={customizedTheme}>
-      <Navbar />
-      <Introduction />
-      <Timeline />
-      <FindMe />
-      <Interests />
-      <Skills />
-      <Projects />
-      <Contact />
+      <ContentProvider>
+        <Navbar />
+        <Introduction />
+        <Timeline />
+        <FindMe />
+        <Interests />
+        <Skills />
+        <Projects />
+        <Contact />
+      </ContentProvider>
     </ThemeProvider>
   );
 }

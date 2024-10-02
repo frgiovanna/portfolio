@@ -1,22 +1,23 @@
 import { Section } from '../../shared/components/Section';
 import { Text } from '../../shared/components/Text';
-import { Image, ContentWrapper, Wrapper } from './styles';
+import { useContentContext } from '../../shared/providers/ContentProvider';
+import { Image, ContentWrapper, Wrapper, DescriptionWrapper } from './styles';
 
 export const Introduction = () => {
+  const {
+    content: { introduction, navbar },
+  } = useContentContext();
+
   return (
-    <Section background="morning" id="introduction">
+    <Section background="morning" id={navbar.home.id}>
       <Wrapper>
         <Image src="/png/avatar/smiling-avatar.png" alt="image" />
         <ContentWrapper>
-          <Text variant="Huge">Olá, meu nome é Giovanna Freitas</Text>
-          <Text>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.
-          </Text>
+          <Text variant="Huge">{introduction.title}</Text>
+          <DescriptionWrapper>
+            <Text>{introduction.description.lineOne}</Text>
+            <Text>{introduction.description.lineTwo}</Text>
+          </DescriptionWrapper>
         </ContentWrapper>
       </Wrapper>
     </Section>

@@ -8,32 +8,39 @@ export const Wrapper = styled.div`
   @media (min-width: 1024px) {
     flex-direction: row;
     align-items: flex-start;
-    gap: 120px;
+    gap: 180px;
   }
 `;
 
 export const Image = styled.img`
   width: 100%;
 
-  filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.1));
-  align-self: center;
   margin-bottom: -32px;
+  padding: 24px;
 
   @media (min-width: 480px) {
     width: 320px;
-    height: 320px;
   }
 
   @media (min-width: 1024px) {
-    width: 360px;
-    height: 360px;
+    width: 380px;
     margin-bottom: unset;
+    padding: unset;
   }
 `;
-
 
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 48px;
+`;
+
+export const LinksWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   gap: 32px;
+`;
+
+export const DescriptionWrapper = styled.div`
+  max-width: 400px;
 `;

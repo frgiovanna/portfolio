@@ -40,3 +40,8 @@ export const ContentWrapper = styled.div`
     margin: 8px 10% 0 0;
   }
 `;
+export const DescriptionWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`;

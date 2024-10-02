@@ -1,47 +1,19 @@
 import { Section } from '../../shared/components/Section';
+import { useContentContext } from '../../shared/providers/ContentProvider';
 import { AlternatingTimeline } from './components/AlternatingTimeline/AlternatingTimeline';
 import RightTimeline from './components/RightTimeline/RightTimeline';
 import { Hider } from './styles';
 
 export const Timeline = () => {
-  const mockedContent = [
-    {
-      title: 'Ismart online',
-      duration: '(2013 - 2015)',
-      description:
-        " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap",
-    },
-    {
-      title: 'Ismart online',
-      duration: '(2013 - 2015)',
-      description:
-        " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap",
-    },
-    {
-      title: 'Ismart online',
-      duration: '(2013 - 2015)',
-      description:
-        " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap",
-    },
-    {
-      title: 'Ismart online',
-      duration: '(2013 - 2015)',
-      description:
-        " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap",
-    },
-    {
-      title: 'Ismart online',
-      duration: '(2013 - 2015)',
-      description:
-        " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap",
-    },
-  ];
+  const {
+    content: { timeline, navbar },
+  } = useContentContext();
 
   return (
-    <Section background="fog" title="Experience" id="timeline">
+    <Section background="fog" title={navbar.timeline.label} id={navbar.timeline.id}>
       <Hider>
-        <AlternatingTimeline content={mockedContent} />
-        <RightTimeline content={mockedContent} />
+        <AlternatingTimeline content={timeline.experiences} />
+        <RightTimeline content={timeline.experiences} />
       </Hider>
     </Section>
   );

@@ -9,9 +9,10 @@ interface TextProps {
   variant?: Variant;
   fontSize?: string;
   lineHeight?: string;
+  fontWeight?: number;
 }
 
-export const Text = ({ children, color, variant = 'Body', fontSize, lineHeight }: TextProps) => {
+export const Text = ({ children, color, variant = 'Body', fontSize, lineHeight, fontWeight }: TextProps) => {
   const setup = {
     H1: H1,
     H2: H2,
@@ -24,7 +25,7 @@ export const Text = ({ children, color, variant = 'Body', fontSize, lineHeight }
   const Component = setup[variant];
 
   return (
-    <Component color={color} fontSize={fontSize} lineHeight={lineHeight}>
+    <Component color={color} fontSize={fontSize} lineHeight={lineHeight} fontWeight={fontWeight}>
       {children}
     </Component>
   );
