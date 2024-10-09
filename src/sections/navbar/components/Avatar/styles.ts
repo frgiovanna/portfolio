@@ -19,5 +19,5 @@ export const Hider = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 40px;
+  width: 48px;
 `;

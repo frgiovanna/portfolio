@@ -81,25 +81,25 @@ export const contents = {
       magazines: [
         {
           title: 'El País',
-          headline: 'Ela criou um aplicativo na escola para lidar com doença rara do pai',
+          headline: '"Ela criou um aplicativo na escola para lidar com doença rara do pai"',
           image: 'png/magazines/el-pais.png',
           link: 'https://brasil.elpais.com/brasil/2016/07/11/politica/1468254986_782379.html',
         },
         {
           title: 'Estadão',
-          headline: 'O que muda na vida de quem aprende a programar?',
+          headline: '"O que muda na vida de quem aprende a programar?"',
           image: 'png/magazines/estadao.png',
           link: 'https://www.estadao.com.br/link/o-que-muda-na-vida-de-quem-aprende-a-programar/',
         },
         {
           title: 'Instituto Claro',
-          headline: 'Filha desenvolve aplicativo para a doença do pai',
+          headline: '"Filha desenvolve aplicativo para a doença do pai"',
           image: 'png/magazines/claro.png',
           link: 'https://www.institutoclaro.org.br/educacao/nossas-novidades/reportagens/filha-desenvolve-aplicativo-para-a-doenca-do-pai/',
         },
         {
           title: 'Gazeta do Povo',
-          headline: 'Aplicativo para todos',
+          headline: '"Aplicativo para todos"',
           image: 'png/magazines/gazeta.png',
           link: 'https://www.gazetadopovo.com.br/vida-e-cidadania/aplicativos-para-todos-edm761bax92forvdwqyfkph72/#:~:text=sociais%20cotidianos%22%2C%20diz.-,Giovanna,-Costa%20de%20Freitas',
         },
