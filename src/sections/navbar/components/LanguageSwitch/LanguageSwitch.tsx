@@ -1,12 +1,28 @@
 import LanguageIcon from '@mui/icons-material/Language';
 import { IconMenu } from '../../../../shared/components/IconMenu';
+import { Language, useContentContext } from '../../../../shared/providers/ContentProvider';
 
 export function LanguageSwitch() {
   const languages = ['pt-BR', 'en-US'];
 
-  function onChange(language: string) {
-    console.log(language);
+  const { setCurrentLanguage, currentLanguage } = useContentContext();
+
+  function isValidLanguage(language: string): language is Language {
+    return Object.values(Language).includes(language as Language);
   }
 
-  return <IconMenu icon={LanguageIcon} items={languages} onChange={onChange} iconSize={24} defaultSelected="pt-BR" />;
+  function onChange(language: string) {
+    const selectedLanguage = isValidLanguage(language) ? language : currentLanguage;
+
+    setCurrentLanguage(selectedLanguage);
+  }
+  return (
+    <IconMenu
+      icon={LanguageIcon}
+      items={languages}
+      onChange={onChange}
+      iconSize={24}
+      defaultSelected={currentLanguage}
+    />
+  );
 }

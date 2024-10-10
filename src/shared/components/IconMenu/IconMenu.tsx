@@ -77,10 +77,7 @@ export function IconMenu({
                 borderBottom: `1px solid ${theme.colors.light}`,
               },
               fontWeight: 500,
-              '&:focus': {
-                backgroundColor: theme.colors.misty,
-              },
-              '&:hover': {
+              '&:focus-visible, &:hover': {
                 backgroundColor: theme.colors.fog,
               },
             },
