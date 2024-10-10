@@ -1,7 +1,13 @@
 import styled from '@emotion/styled';
 import { theme } from '../../theme';
 
-type Props = { color?: keyof typeof theme.colors; fontSize?: string; lineHeight?: string; fontWeight?: number };
+type Props = {
+  color?: keyof typeof theme.colors;
+  fontSize?: string;
+  lineHeight?: string;
+  fontWeight?: number;
+  textDecoration?: string;
+};
 
 export const Huge = styled.h1<Props>`
   margin: 0;
@@ -64,4 +70,5 @@ export const Body = styled.p<Props>`
   line-height: ${({ lineHeight }) => lineHeight || '20px'};
   font-weight: ${({ fontWeight }) => fontWeight || 400};
   color: ${({ color }) => (color ? theme.colors[color] : theme.colors.dawn)};
+  text-decoration: ${({ textDecoration }) => textDecoration || 'none'};
 `;

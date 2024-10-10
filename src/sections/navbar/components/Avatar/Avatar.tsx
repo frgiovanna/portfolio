@@ -2,7 +2,6 @@ import { Text } from '../../../../shared/components/Text';
 import { Hider, Image } from './styles';
 
 export function Avatar() {
-
   return (
     <Hider>
       <Text variant="Large" fontSize="40px">

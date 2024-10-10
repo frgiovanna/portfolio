@@ -1,17 +1,19 @@
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import { contents } from './contents';
+import { Language } from './types';
 
-type Content = (typeof contents)['pt-br'];
-type Language = 'pt-br' | 'en-us';
+type Content = (typeof contents)[Language.pt];
 
 interface ContentContextType {
   content: Content;
-  setLanguage: React.Dispatch<React.SetStateAction<Language>>;
+  setCurrentLanguage: React.Dispatch<React.SetStateAction<Language>>;
+  currentLanguage: Language;
 }
 
 const ContentContext = createContext<ContentContextType>({
-  content: contents['pt-br'],
-  setLanguage: () => {},
+  content: contents[Language.pt],
+  setCurrentLanguage: () => {},
+  currentLanguage: Language.pt,
 });
 
 const fetchContentByLanguage = (language: Language) => {
@@ -23,14 +25,18 @@ interface ContentProviderProps {
 }
 
 export const ContentProvider: React.FC<ContentProviderProps> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('pt-br');
-  const [content, setContent] = useState<Content>(contents['pt-br']);
+  const [currentLanguage, setCurrentLanguage] = useState<Language>(Language.pt);
+  const [content, setContent] = useState<Content>(contents[Language.pt]);
 
   useEffect(() => {
-    setContent(fetchContentByLanguage(language));
-  }, [language]);
+    setContent(fetchContentByLanguage(currentLanguage));
+  }, [currentLanguage]);
 
-  return <ContentContext.Provider value={{ content, setLanguage }}>{children}</ContentContext.Provider>;
+  return (
+    <ContentContext.Provider value={{ content, setCurrentLanguage, currentLanguage }}>
+      {children}
+    </ContentContext.Provider>
+  );
 };
 
 export const useContentContext = (): ContentContextType => {

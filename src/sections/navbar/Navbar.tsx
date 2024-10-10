@@ -4,6 +4,7 @@ import { useScrollTrigger, Slide } from '@mui/material';
 import { Toolbar } from './styles';
 import { Avatar } from './components/Avatar';
 import { Content } from './components/Content';
+import { LanguageSwitch } from './components/LanguageSwitch';
 
 function HideOnScroll({ children }: { children: React.ReactElement }) {
   const trigger = useScrollTrigger();
@@ -21,8 +22,17 @@ export function Navbar() {
       <AppBar sx={{ boxShadow: '0px 1px 4px rgba(0, 0, 0, 0.1)' }}>
         <Container>
           <Toolbar>
-            <Avatar />
-            <Content />
+            <div id="avatar">
+              <Avatar />
+            </div>
+
+            <div id="sections">
+              <Content />
+            </div>
+
+            <div id="languages">
+              <LanguageSwitch />
+            </div>
           </Toolbar>
         </Container>
       </AppBar>

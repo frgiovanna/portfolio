@@ -17,7 +17,7 @@ export const SocialMedia = ({ link, image, title, subtitle }: SocialMideaProps) 
           <Text color="night" variant="H3">
             {title}
           </Text>
-          <Text>{subtitle}</Text>
+          <Text textDecoration="underline">{subtitle}</Text>
         </div>
       </Wrapper>
     </Link>

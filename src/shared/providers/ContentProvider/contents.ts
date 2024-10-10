@@ -1,5 +1,7 @@
+import { Language } from './types';
+
 export const contents = {
-  'pt-br': {
+  [Language.pt]: {
     navbar: {
       home: {
         label: 'Início',
@@ -47,7 +49,7 @@ export const contents = {
           title: 'Faculdade - Análise e Desenvolvimento de Sistemas',
           duration: '(2019 - 2020)',
           description:
-            'Neste curso, explorei áreas como front-end, mobile, back-end, qualidade e design de software. Também participei de projetos com empresas como a IBM, aprimorando habilidades práticas e conhecendo as demandas do mercado',
+            'Neste curso, explorei áreas como front-end, mobile, back-end, qualidade e design de software. Também participei de projetos com empresas como a IBM, aprimorando habilidades práticas e conhecendo as demandas do mercado.',
         },
         {
           title: 'SmartMEI - Desenvolvedora Fullstack Junior',
@@ -81,25 +83,25 @@ export const contents = {
       magazines: [
         {
           title: 'El País',
-          headline: 'Ela criou um aplicativo na escola para lidar com doença rara do pai',
+          headline: '"Ela criou um aplicativo na escola para lidar com doença rara do pai"',
           image: 'png/magazines/el-pais.png',
           link: 'https://brasil.elpais.com/brasil/2016/07/11/politica/1468254986_782379.html',
         },
         {
           title: 'Estadão',
-          headline: 'O que muda na vida de quem aprende a programar?',
+          headline: '"O que muda na vida de quem aprende a programar?"',
           image: 'png/magazines/estadao.png',
           link: 'https://www.estadao.com.br/link/o-que-muda-na-vida-de-quem-aprende-a-programar/',
         },
         {
           title: 'Instituto Claro',
-          headline: 'Filha desenvolve aplicativo para a doença do pai',
+          headline: '"Filha desenvolve aplicativo para a doença do pai"',
           image: 'png/magazines/claro.png',
           link: 'https://www.institutoclaro.org.br/educacao/nossas-novidades/reportagens/filha-desenvolve-aplicativo-para-a-doenca-do-pai/',
         },
         {
           title: 'Gazeta do Povo',
-          headline: 'Aplicativo para todos',
+          headline: '"Aplicativo para todos"',
           image: 'png/magazines/gazeta.png',
           link: 'https://www.gazetadopovo.com.br/vida-e-cidadania/aplicativos-para-todos-edm761bax92forvdwqyfkph72/#:~:text=sociais%20cotidianos%22%2C%20diz.-,Giovanna,-Costa%20de%20Freitas',
         },
@@ -115,7 +117,7 @@ export const contents = {
         {
           title: 'Desenvolvimento Mobile',
           description:
-            'Dentro do desenvolvimento web, o desenvolvimento mobile sempre foi o que mais me chamou a atenção. Por mais que eu não trabalhe com isso atualmente, pretendo dedicar um tempo da minha carreira como desenvolvedora mobile.',
+            'Dentro do desenvolvimento front-end, o desenvolvimento mobile sempre foi o que mais me chamou a atenção. Por mais que eu não trabalhe com isso atualmente, pretendo dedicar um tempo da minha carreira como desenvolvedora mobile.',
         },
       ],
     },
@@ -226,40 +228,39 @@ export const contents = {
       ],
     },
   },
-  'en-us': {
+  [Language.en]: {
     navbar: {
       home: {
-        label: 'Início',
+        label: 'Introduction',
         id: 'introduction',
       },
       timeline: {
-        label: 'Linha do tempo',
+        label: 'Timeline',
         id: 'timeline',
       },
       findMe: {
-        label: 'Na mídia',
+        label: 'Media Mentions',
         id: 'find-me',
       },
       skills: {
-        label: 'Competências',
+        label: 'Skills',
         id: 'skills',
       },
       interests: {
-        label: 'Interesses',
+        label: 'Interests',
         id: 'interests',
       },
       contact: {
-        label: 'Contato',
+        label: 'Contact',
         id: 'contact',
       },
     },
     introduction: {
-      title: 'Olá,meu nome é Giovanna Freitas',
+      title: 'Hey, my name is Giovanna Freitas.',
       description: {
         lineOne:
-          'Com 13 anos, descobri o mundo da programação e, desde então, venho mergulhando em cada detalhe desse universo. Atualmente, atuo como desenvolvedora front-end, onde transformo ideias em experiências digitais.',
-        lineTwo:
-          'Aqui, você poderá acompanhar um pouco da minha trajetória, meus projetos e meu constante aprendizado no universo da tecnologia.',
+          'When I was 13, I discovered the world of programming. Since then, I have immersed myself in every detail of this universe. Currently, I work as a front-end developer, transforming ideas into digital experiences.',
+        lineTwo: 'Here, you can keep up with my journey, projects, and ongoing learning in the world of technology.',
       },
     },
     timeline: {
@@ -268,65 +269,65 @@ export const contents = {
           title: 'Ismart online',
           duration: '(2013 - 2015)',
           description:
-            'Foi o meu primeiro contato com programação. Aprendi HTML, CSS e criação e apresentação de protótipos em grupo. Também desenvolvi aplicativos utilizando a Fábrica de Aplicativos, o que me levou a ser entrevistada por veículos como El País e Instituto Claro.',
+            'It was my first experience with programming. I learned HTML, CSS, and how to create and present prototypes in a group. I also developed applications using the "Fábrica de Aplicativos" tool, which led to interviews with some known Brazilian media outlets such as El País and Instituto Claro.',
         },
         {
-          title: 'Faculdade - Análise e Desenvolvimento de Sistemas',
+          title: 'College - System of Analisys and Development',
           duration: '(2019 - 2020)',
           description:
-            'Neste curso, explorei áreas como front-end, mobile, back-end, qualidade e design de software. Também participei de projetos com empresas como a IBM, aprimorando habilidades práticas e conhecendo as demandas do mercado',
+            'During this course, I delved into various areas including front-end, mobile, back-end, quality, and software design. Furthermore, I actively engaged in projects with top companies like IBM, honing practical skills and gaining an in-depth understanding of market demands.',
         },
         {
-          title: 'SmartMEI - Desenvolvedora Fullstack Junior',
+          title: 'SmartMEI - Full-stack Developer Junior',
           duration: '(2020 - 2021)',
           description:
-            'Trabalhei no front-end de um projeto de pagamento em massa de funcionários PJ. Trabalhei com ReactJS, Material UI e GraphQL para requisições. Tive contato com SCRUM e versionamento no Bitbucket.',
+            'I worked on the front end of a project for mass payment of corporate employees using ReactJS, Material UI, and GraphQL for requests. I also had contact with SCRUM and versioning in Bitbucket.',
         },
         {
-          title: 'Wellhub (antigo Gympass) - Desenvolvedora front-end Junior',
+          title: 'Wellhub (former Gympass) - Front-end Developer Junior',
           duration: '(2021 - 2022)',
           description:
-            'Trabalhando em produtos digitais, participei de projetos diversos, desde legados até novos, utilizando React, Typescript e Styled Components para o front-end. Também tive contato com GraphQL para integrações com o backend. Além disso, desenvolvi testes de software (unitários e e2e) para garantir a qualidade do código.',
+            "While working on web products, I've been involved in a range of projects, both old and new, where I've utilized React, Typescript, and Styled Components for the frontend. Additionally, I've worked with GraphQL to integrate with the backend. Furthermore, I've been responsible for developing software tests (including unit and end-to-end tests) to maintain high code quality.",
         },
         {
-          title: 'Wellhub (antigo Gympass) - Desenvolvedora front-end Pleno',
-          duration: '(2022 - atual)',
+          title: 'Wellhub (former Gympass) - Front-end Developer Mid-level',
+          duration: '(2022 - Present)',
           description:
-            'Além da experiência anterior, atuei também em projetos de micro-frontend, GraphQL server e Design System.  Pude me envolver em definições de produto e refinamento de tarefas para otimizar o trabalho do time. Além disso, tive foco em qualidade do software desenvolvido por mim e pelos colegas através de code reviews.',
+            'In addition to my previous experience, I have also worked on micro-frontend, GraphQL server and Design System projects. I was able to get involved in product definitions and task refinement to optimize work time. In addition, I focus on the quality of the software developed by me and my colleagues through code reviews.',
         },
       ],
     },
     findMe: {
       description: {
         lineOne:
-          'Aos 13 anos, tive a oportunidade de desenvolver um aplicativo para celulares por meio do Instituto Ismart e do projeto Ismart Online, abordando a doença que meu pai enfrentava na época: a Miastenia Grave.',
+          'At the age of 13, I had the opportunity to develop a mobile application through the Ismart Institute and the Ismart Online project, addressing the disease my father faced at the time: Myasthenia Gravis.',
         lineTwo:
-          'Utilizando a Fábrica de Aplicativos, reuni diversos conteúdos relevantes, incluindo informações oficiais da ABRAMI (Associação Brasileira de Miastenia), vídeos informativos e uma seção de interação para os usuários, onde alguns portadores ou familiares chegaram a deixar suas experiências e feedback sobre o aplicativo.',
+          'Using the "Fábrica de Aplicativos" tool, I collected various relevant contents, including official information from ABRAMI (Brazilian Myasthenia Association), informative videos, and an interactive section for users. Some individuals dealing with the condition and their family members shared their experiences and feedback about the app.',
         lineThree:
-          'Essa experiência me levou a ser entrevistada por vários veículos, como El País e Instituto Claro. Saiba mais:',
+          'As a result of this experience, I had the opportunity to be interviewed by some Brazilian known media outlets, including El País and Instituto Claro. Find out more:',
       },
       magazines: [
         {
           title: 'El País',
-          headline: 'Ela criou um aplicativo na escola para lidar com doença rara do pai',
+          headline: '"She created an app at school to deal with her father\'s rare disease"',
           image: 'png/magazines/el-pais.png',
           link: 'https://brasil.elpais.com/brasil/2016/07/11/politica/1468254986_782379.html',
         },
         {
           title: 'Estadão',
-          headline: 'O que muda na vida de quem aprende a programar?',
+          headline: '"What changes in the lives of those who learn to program?"',
           image: 'png/magazines/estadao.png',
           link: 'https://www.estadao.com.br/link/o-que-muda-na-vida-de-quem-aprende-a-programar/',
         },
         {
           title: 'Instituto Claro',
-          headline: 'Filha desenvolve aplicativo para a doença do pai',
+          headline: '"Daughter develops app to deal with father\'s disease"',
           image: 'png/magazines/claro.png',
           link: 'https://www.institutoclaro.org.br/educacao/nossas-novidades/reportagens/filha-desenvolve-aplicativo-para-a-doenca-do-pai/',
         },
         {
           title: 'Gazeta do Povo',
-          headline: 'Aplicativo para todos',
+          headline: '"App for all"',
           image: 'png/magazines/gazeta.png',
           link: 'https://www.gazetadopovo.com.br/vida-e-cidadania/aplicativos-para-todos-edm761bax92forvdwqyfkph72/#:~:text=sociais%20cotidianos%22%2C%20diz.-,Giovanna,-Costa%20de%20Freitas',
         },
@@ -335,14 +336,14 @@ export const contents = {
     interests: {
       items: [
         {
-          title: 'Liderança',
+          title: 'Leadership',
           description:
-            'Durante toda a minha carreira profissional, sempre fui apaixonada por liderar iniciativas e ajudar pessoas.',
+            'Throughout my professional career, I have always been passionate about leading initiatives and helping people.',
         },
         {
-          title: 'Desenvolvimento Mobile',
+          title: 'Mobile development',
           description:
-            'Dentro do desenvolvimento web, o desenvolvimento mobile sempre foi o que mais me chamou a atenção. Por mais que eu não trabalhe com isso atualmente, pretendo dedicar um tempo da minha carreira como desenvolvedora mobile.',
+            "Within front-end development, mobile development has always been the one that caught my attention the most. Although I'm not currently working with it, I plan to dedicate some time in my career to becoming a mobile developer.",
         },
       ],
     },
@@ -431,7 +432,7 @@ export const contents = {
     projects: undefined,
     contact: {
       description:
-        'Gostou do meu trabalho? Fique à vontade para entrar em contato pelos links abaixo. Estou à disposição para uma boa conversa!',
+        "Did you enjoy my work? Don't hesitate to reach out to me using the links below. I'm open for a friendly chat!",
       socialMedia: [
         {
           image: '/png/social-media/linkedin.png',
