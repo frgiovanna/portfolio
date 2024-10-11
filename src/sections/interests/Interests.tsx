@@ -1,8 +1,8 @@
-import { Text } from '../../shared/components/Text';
+import { Text } from '@shared/components/Text';
 
 import { Block, ContentWrapper } from './styles';
-import { Section } from '../../shared/components/Section';
-import { useContentContext } from '../../shared/providers/ContentProvider';
+import { Section } from '@shared/components/Section';
+import { useContentContext } from '@shared/providers/ContentProvider';
 
 export const Interests = () => {
   const {

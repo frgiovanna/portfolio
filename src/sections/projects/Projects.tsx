@@ -1,7 +1,7 @@
 import { CardsWrapper } from './styles';
 import ProjectCard from './components/ProjectCard';
-import { Section } from '../../shared/components/Section';
-import { useContentContext } from '../../shared/providers/ContentProvider';
+import { Section } from '@shared/components/Section';
+import { useContentContext } from '@shared/providers/ContentProvider';
 
 export function Projects() {
   const {

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
-import { theme } from '../../../shared/theme';
+import { theme } from '@shared/theme';
 
 export const Wrapper = styled.div`
   display: flex;

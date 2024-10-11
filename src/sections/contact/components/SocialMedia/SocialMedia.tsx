@@ -1,5 +1,5 @@
 import { Image, Link, Wrapper } from './styles';
-import { Text } from '../../../../shared/components/Text';
+import { Text } from '@shared/components/Text';
 
 interface SocialMideaProps {
   link: string;

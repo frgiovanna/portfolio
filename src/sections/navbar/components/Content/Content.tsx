@@ -1,4 +1,4 @@
-import { useContentContext } from '../../../../shared/providers/ContentProvider';
+import { useContentContext } from '@shared/providers/ContentProvider';
 import { SectionButton } from '../SectionButton';
 import { SectionsMenu } from './SectionsMenu';
 import { Hider, SectionsWrapper } from './styles';

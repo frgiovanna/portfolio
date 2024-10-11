@@ -1,4 +1,4 @@
-import { Text } from '../../../../shared/components/Text';
+import { Text } from '@shared/components/Text';
 import { SkillCard } from '../SkillCard';
 import { SkillsWrapper, Wrapper } from './styles';
 

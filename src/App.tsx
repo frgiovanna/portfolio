@@ -1,3 +1,8 @@
+import { createTheme, ThemeProvider } from '@mui/material';
+
+import { ContentProvider } from '@shared/providers/ContentProvider';
+import { theme } from '@shared/theme';
+
 import { Introduction } from './sections/introduction';
 import { FindMe } from './sections/find-me';
 import { Interests } from './sections/interests';
@@ -6,10 +11,7 @@ import { Contact } from './sections/contact';
 import { Timeline } from './sections/timeline';
 import { Projects } from './sections/projects';
 
-import { createTheme, ThemeProvider } from '@mui/material';
-import { theme } from './shared/theme';
 import { Navbar } from './sections/navbar/Navbar';
-import { ContentProvider } from './shared/providers/ContentProvider';
 
 const customizedTheme = createTheme({
   typography: {

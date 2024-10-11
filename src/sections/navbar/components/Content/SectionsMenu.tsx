@@ -1,5 +1,5 @@
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
-import { IconMenu } from '../../../../shared/components/IconMenu';
+import { IconMenu } from '@shared/components/IconMenu';
 
 interface SectionsMenuProps {
   sections: { label: string; id: string }[];

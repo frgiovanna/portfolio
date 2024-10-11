@@ -1,5 +1,5 @@
-import { Card } from '../../../shared/components/Card';
-import { Text } from '../../../shared/components/Text';
+import { Card } from '@shared/components/Card';
+import { Text } from '@shared/components/Text';
 import { ActionsWrapper, Button, Image, Wrapper } from './styles';
 
 interface ProjectCardProps {

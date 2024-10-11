@@ -1,5 +1,5 @@
-import { Section } from '../../shared/components/Section';
-import { useContentContext } from '../../shared/providers/ContentProvider';
+import { Section } from '@shared/components/Section';
+import { useContentContext } from '@shared/providers/ContentProvider';
 import { Category } from './components/Category';
 import { CardsWrapper } from './styles';
 

@@ -1,6 +1,6 @@
 import TimelineContent from '@mui/lab/TimelineContent';
 import { ContentWrapper, HorizontalLine, TextWrapper, TitleWrapper } from './styles';
-import { Text } from '../../../../shared/components/Text';
+import { Text } from '@shared/components/Text';
 
 interface ContentProps {
   position: 'left' | 'right';

@@ -1,5 +1,5 @@
-import { Section } from '../../shared/components/Section';
-import { useContentContext } from '../../shared/providers/ContentProvider';
+import { Section } from '@shared/components/Section';
+import { useContentContext } from '@shared/providers/ContentProvider';
 import { AlternatingTimeline } from './components/AlternatingTimeline/AlternatingTimeline';
 import RightTimeline from './components/RightTimeline/RightTimeline';
 import { Hider } from './styles';

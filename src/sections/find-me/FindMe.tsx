@@ -1,6 +1,6 @@
-import { Section } from '../../shared/components/Section';
-import { Text } from '../../shared/components/Text';
-import { useContentContext } from '../../shared/providers/ContentProvider';
+import { Section } from '@shared/components/Section';
+import { Text } from '@shared/components/Text';
+import { useContentContext } from '@shared/providers/ContentProvider';
 import { LinkCard } from './components/LinkCard';
 import { Wrapper, LinksWrapper, ContentWrapper, DescriptionWrapper } from './styles';
 

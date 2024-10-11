@@ -1,5 +1,5 @@
 import AppBar from '@mui/material/AppBar';
-import { Container } from '../../shared/components/Container';
+import { Container } from '@shared/components/Container';
 import { useScrollTrigger, Slide } from '@mui/material';
 import { Toolbar } from './styles';
 import { Avatar } from './components/Avatar';

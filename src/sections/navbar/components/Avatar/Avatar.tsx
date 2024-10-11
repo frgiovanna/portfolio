@@ -1,4 +1,4 @@
-import { Text } from '../../../../shared/components/Text';
+import { Text } from '@shared/components/Text';
 import { Hider, Image } from './styles';
 
 export function Avatar() {
