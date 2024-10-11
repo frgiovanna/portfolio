@@ -1,6 +1,6 @@
 import { Wrapper, Image } from './styles';
-import { Text } from '../../../../shared/components/Text';
-import { Card } from '../../../../shared/components/Card';
+import { Text } from '@shared/components/Text';
+import { Card } from '@shared/components/Card';
 
 interface SkillCardProps {
   title: string;

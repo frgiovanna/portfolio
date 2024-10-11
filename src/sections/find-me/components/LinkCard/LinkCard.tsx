@@ -1,5 +1,5 @@
-import { Card } from '../../../../shared/components/Card';
-import { Text } from '../../../../shared/components/Text';
+import { Card } from '@shared/components/Card';
+import { Text } from '@shared/components/Text';
 import { Wrapper, Image, ContentWrapper } from './styles';
 import LaunchRoundedIcon from '@mui/icons-material/LaunchRounded';
 

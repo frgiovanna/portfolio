@@ -1,6 +1,7 @@
-import { Section } from '../../shared/components/Section';
-import { Text } from '../../shared/components/Text';
-import { useContentContext } from '../../shared/providers/ContentProvider';
+import { Section } from '@shared/components/Section';
+import { Text } from '@shared/components/Text';
+import { useContentContext } from '@shared/providers/ContentProvider';
+
 import { Image, ContentWrapper, Wrapper, DescriptionWrapper } from './styles';
 
 export const Introduction = () => {

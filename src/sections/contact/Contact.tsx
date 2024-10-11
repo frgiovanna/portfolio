@@ -1,9 +1,9 @@
-import { Text } from '../../shared/components/Text';
+import { Text } from '@shared/components/Text';
 
 import { Image, ContentWrapper, Wrapper, DescriptionWrapper, LinksWrapper } from './styles';
 import { SocialMedia } from './components/SocialMedia';
-import { Section } from '../../shared/components/Section';
-import { useContentContext } from '../../shared/providers/ContentProvider';
+import { Section } from '@shared/components/Section';
+import { useContentContext } from '@shared/providers/ContentProvider';
 
 export const Contact = () => {
   const {

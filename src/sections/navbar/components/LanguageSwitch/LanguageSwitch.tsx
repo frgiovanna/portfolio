@@ -1,6 +1,6 @@
 import LanguageIcon from '@mui/icons-material/Language';
-import { IconMenu } from '../../../../shared/components/IconMenu';
-import { Language, useContentContext } from '../../../../shared/providers/ContentProvider';
+import { IconMenu } from '@shared/components/IconMenu';
+import { Language, useContentContext } from '@shared/providers/ContentProvider';
 
 export function LanguageSwitch() {
   const languages = ['pt-BR', 'en-US'];

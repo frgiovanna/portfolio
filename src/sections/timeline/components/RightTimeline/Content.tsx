@@ -1,5 +1,5 @@
 import { TimelineContent } from '@mui/lab';
-import { Text } from '../../../../shared/components/Text';
+import { Text } from '@shared/components/Text';
 import { TitleWrapper } from '../AlternatingTimeline/styles';
 
 interface ContentProps {
