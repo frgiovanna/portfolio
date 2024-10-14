@@ -9,16 +9,12 @@ export function LanguageSwitch() {
     currentLanguage,
   } = useContentContext();
 
-  const languageList = languages.map((language) => language.label);
-
-  const languageItem = languages.find((lang) => lang.id === currentLanguage)?.label;
-
   function isValidLanguage(language?: string): language is Language {
     return Boolean(language) && Object.values(Language).includes(language as Language);
   }
 
   function onChange(language: string) {
-    const languageId = languages.find((lang) => lang.label === language)?.id;
+    const languageId = Object.entries(languages).find(([, label]) => label === language)?.[0];
 
     const selectedLanguage = isValidLanguage(languageId) ? languageId : currentLanguage;
 
@@ -28,10 +24,10 @@ export function LanguageSwitch() {
   return (
     <IconMenu
       icon={LanguageIcon}
-      items={languageList}
+      items={Object.values(languages)}
       onChange={onChange}
       iconSize={24}
-      defaultSelected={languageItem}
+      defaultSelected={languages[currentLanguage]}
     />
   );
 }
