@@ -18,7 +18,9 @@ export function Category({ title, skills }: CategoryProps) {
       </Text>
       <SkillsWrapper>
         {skills.map((skill) => (
-          <SkillCard {...skill} />
+          <div key={skill.title}>
+            <SkillCard {...skill} />
+          </div>
         ))}
       </SkillsWrapper>
     </Wrapper>

@@ -22,7 +22,9 @@ export const FindMe = () => {
         </ContentWrapper>
         <LinksWrapper>
           {findMe.magazines.map((magazine) => (
-            <LinkCard {...magazine} />
+            <div key={magazine.title}>
+              <LinkCard {...magazine} />
+            </div>
           ))}
         </LinksWrapper>
       </Wrapper>

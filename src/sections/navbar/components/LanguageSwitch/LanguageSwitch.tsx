@@ -5,7 +5,7 @@ import { Language, useContentContext } from '@shared/providers/ContentProvider';
 export function LanguageSwitch() {
   const languages = ['pt-BR', 'en-US'];
 
-  const { setCurrentLanguage, currentLanguage } = useContentContext();
+  const { setLanguage, currentLanguage } = useContentContext();
 
   function isValidLanguage(language: string): language is Language {
     return Object.values(Language).includes(language as Language);
@@ -14,7 +14,7 @@ export function LanguageSwitch() {
   function onChange(language: string) {
     const selectedLanguage = isValidLanguage(language) ? language : currentLanguage;
 
-    setCurrentLanguage(selectedLanguage);
+    setLanguage(selectedLanguage);
   }
   return (
     <IconMenu
