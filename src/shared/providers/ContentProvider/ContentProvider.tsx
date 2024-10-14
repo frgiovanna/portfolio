@@ -1,41 +1,47 @@
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import { contents } from './contents';
 import { Language } from './types';
+import { getDefaultLanguage } from './getDefaultLanguage';
 
 type Content = (typeof contents)[Language.pt];
 
 interface ContentContextType {
   content: Content;
-  setCurrentLanguage: React.Dispatch<React.SetStateAction<Language>>;
+  setLanguage: (language: Language) => void;
   currentLanguage: Language;
 }
 
+const defaultLanguage = getDefaultLanguage();
+
 const ContentContext = createContext<ContentContextType>({
-  content: contents[Language.pt],
-  setCurrentLanguage: () => {},
-  currentLanguage: Language.pt,
+  content: contents[defaultLanguage],
+  setLanguage: () => {},
+  currentLanguage: defaultLanguage,
 });
 
-const fetchContentByLanguage = (language: Language) => {
+function fetchContentByLanguage(language: Language) {
   return contents[language];
-};
+}
 
 interface ContentProviderProps {
   children: ReactNode;
 }
 
 export const ContentProvider: React.FC<ContentProviderProps> = ({ children }) => {
-  const [currentLanguage, setCurrentLanguage] = useState<Language>(Language.pt);
-  const [content, setContent] = useState<Content>(contents[Language.pt]);
+  const [currentLanguage, setCurrentLanguage] = useState<Language>(defaultLanguage);
+  const [content, setContent] = useState<Content>(contents[defaultLanguage]);
+
+  function setLanguage(language: Language) {
+    localStorage.setItem('@frgiovanna:preferred-language', language);
+    setCurrentLanguage(language);
+  }
 
   useEffect(() => {
     setContent(fetchContentByLanguage(currentLanguage));
   }, [currentLanguage]);
 
   return (
-    <ContentContext.Provider value={{ content, setCurrentLanguage, currentLanguage }}>
-      {children}
-    </ContentContext.Provider>
+    <ContentContext.Provider value={{ content, setLanguage, currentLanguage }}>{children}</ContentContext.Provider>
   );
 };
 

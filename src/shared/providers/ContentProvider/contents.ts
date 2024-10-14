@@ -2,6 +2,7 @@ import { Language } from './types';
 
 export const contents = {
   [Language.pt]: {
+    languages: { [Language.pt]: 'Português (BR)', [Language.en]: 'English (US)' },
     navbar: {
       home: {
         label: 'Início',
@@ -229,6 +230,7 @@ export const contents = {
     },
   },
   [Language.en]: {
+    languages: { [Language.pt]: 'Português (BR)', [Language.en]: 'English (US)' },
     navbar: {
       home: {
         label: 'Introduction',

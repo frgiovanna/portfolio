@@ -3,26 +3,31 @@ import { IconMenu } from '@shared/components/IconMenu';
 import { Language, useContentContext } from '@shared/providers/ContentProvider';
 
 export function LanguageSwitch() {
-  const languages = ['pt-BR', 'en-US'];
+  const {
+    content: { languages },
+    setLanguage,
+    currentLanguage,
+  } = useContentContext();
 
-  const { setCurrentLanguage, currentLanguage } = useContentContext();
-
-  function isValidLanguage(language: string): language is Language {
-    return Object.values(Language).includes(language as Language);
+  function isValidLanguage(language?: string): language is Language {
+    return Boolean(language) && Object.values(Language).includes(language as Language);
   }
 
   function onChange(language: string) {
-    const selectedLanguage = isValidLanguage(language) ? language : currentLanguage;
+    const languageId = Object.entries(languages).find(([, label]) => label === language)?.[0];
 
-    setCurrentLanguage(selectedLanguage);
+    const selectedLanguage = isValidLanguage(languageId) ? languageId : currentLanguage;
+
+    setLanguage(selectedLanguage);
   }
+
   return (
     <IconMenu
       icon={LanguageIcon}
-      items={languages}
+      items={Object.values(languages)}
       onChange={onChange}
       iconSize={24}
-      defaultSelected={currentLanguage}
+      defaultSelected={languages[currentLanguage]}
     />
   );
 }

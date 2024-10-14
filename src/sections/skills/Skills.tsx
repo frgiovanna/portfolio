@@ -12,7 +12,9 @@ export const Skills = () => {
     <Section background="morning" title={navbar.skills.label} id={navbar.skills.id}>
       <CardsWrapper>
         {skills.categories.map((category) => (
-          <Category {...category} />
+          <div key={category.title}>
+            <Category {...category} />
+          </div>
         ))}
       </CardsWrapper>
     </Section>

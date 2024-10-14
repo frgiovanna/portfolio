@@ -13,7 +13,7 @@ export const Interests = () => {
     <Section background="fog" title={navbar.interests.label} id={navbar.interests.id}>
       <ContentWrapper>
         {interests.items.map(({ title, description }) => (
-          <Block>
+          <Block key={title}>
             <Text variant="H2" color="evening">
               {title}
             </Text>
