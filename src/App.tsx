@@ -12,10 +12,11 @@ import { Timeline } from './sections/timeline';
 import { Projects } from './sections/projects';
 
 import { Navbar } from './sections/navbar/Navbar';
+import { useScrollReveal } from '@shared/hooks';
 
 const customizedTheme = createTheme({
   typography: {
-    fontFamily: 'Montserrat, sans-serif',
+    fontFamily: theme.fontFamily.quicksand,
   },
   palette: {
     primary: {
@@ -31,9 +32,12 @@ const customizedTheme = createTheme({
 });
 
 function App() {
+  useScrollReveal();
+
   return (
     <ThemeProvider theme={customizedTheme}>
       <ContentProvider>
+        <div id="page-top" />
         <Navbar />
         <Introduction />
         <Timeline />

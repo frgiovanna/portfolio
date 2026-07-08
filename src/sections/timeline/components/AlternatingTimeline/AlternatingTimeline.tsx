@@ -2,7 +2,7 @@ import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import { Content } from './Content';
-import { Connector, Dot } from '../../styles';
+import { Connector, Dot, TimelineEnd, TimelineStart } from '../../styles';
 
 interface AlternatingTimelineProps {
   content: {
@@ -17,14 +17,15 @@ export const AlternatingTimeline = ({ content }: AlternatingTimelineProps) => {
     <Timeline position="alternate-reverse" id="alternating-timeline">
       {content.map(({ title, description, duration }, index) => {
         const isFirstItem = index === 0;
+        const isLastItem = index === content.length - 1;
         const isLeftContent = index % 2 === 0;
 
         return (
           <TimelineItem key={title}>
             <TimelineSeparator>
-              {!isFirstItem && <Connector />}
+              {isFirstItem ? <TimelineStart /> : <Connector />}
               <Dot />
-              <Connector style={isFirstItem ? { marginTop: '10px' } : undefined} />
+              {isLastItem ? <TimelineEnd /> : <Connector />}
             </TimelineSeparator>
             <Content
               position={isLeftContent ? 'left' : 'right'}

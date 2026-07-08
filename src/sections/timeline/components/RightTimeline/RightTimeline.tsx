@@ -1,7 +1,7 @@
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import { Connector, Dot } from '../../styles';
+import { Connector, Dot, TimelineEnd, TimelineStart } from '../../styles';
 import Content from './Content';
 
 interface RightTimelineProps {
@@ -30,8 +30,9 @@ export default function RightTimeline({ content }: RightTimelineProps) {
         return (
           <TimelineItem key={title}>
             <TimelineSeparator>
+              {isFirstItem ? <TimelineStart /> : <Connector />}
               <Dot />
-              <Connector style={isFirstItem ? { marginTop: '10px' } : undefined} />
+              {isLastItem ? <TimelineEnd /> : <Connector />}
             </TimelineSeparator>
             <Content title={title} description={description} duration={duration} isLastItem={isLastItem} />
           </TimelineItem>

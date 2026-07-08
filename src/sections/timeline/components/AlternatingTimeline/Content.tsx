@@ -20,7 +20,7 @@ export const Content = ({ position, title, description, duration }: ContentProps
             </Text>
             <Text color="twilight">{duration}</Text>
           </TitleWrapper>
-          <div style={{ textAlign: 'justify' }}>
+          <div>
             <Text>{description}</Text>
           </div>
         </TextWrapper>

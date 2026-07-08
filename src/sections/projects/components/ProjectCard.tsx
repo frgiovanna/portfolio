@@ -19,12 +19,14 @@ function ProjectCard({ title, description, image, code, demo }: ProjectCardProps
         <Text>{description}</Text>
 
         <ActionsWrapper>
-          <Button variant="primary" href={code}>
+          <Button variant="primary" href={code} target="_blank" rel="noreferrer">
             Code
           </Button>
-          <Button variant="secondary" href={demo}>
-            Code
-          </Button>
+          {demo && (
+            <Button variant="secondary" href={demo} target="_blank" rel="noreferrer">
+              Demo
+            </Button>
+          )}
         </ActionsWrapper>
       </Wrapper>
     </Card>

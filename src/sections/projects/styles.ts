@@ -13,4 +13,13 @@ export const CardsWrapper = styled.div`
   @media (min-width: 1024px) {
     gap: 64px;
   }
+
+  > * {
+    min-width: 0;
+  }
+
+  > *:hover img {
+    filter: saturate(1.08) contrast(1.03);
+    transform: scale(1.015);
+  }
 `;

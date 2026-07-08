@@ -13,8 +13,12 @@ export function Section({ background, title, children, id }: SectionProps) {
   return (
     <Wrapper background={background} id={id}>
       <Container>
-        {title && <Text variant="Large">{title}</Text>}
-        {children}
+        {title && (
+          <div data-reveal>
+            <Text variant="Large">{title}</Text>
+          </div>
+        )}
+        <div data-reveal>{children}</div>
       </Container>
     </Wrapper>
   );

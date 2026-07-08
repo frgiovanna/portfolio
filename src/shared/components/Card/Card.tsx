@@ -8,7 +8,7 @@ interface CardProps {
 
 export function Card({ children, onClick, shadow = true }: CardProps) {
   return (
-    <Wrapper shadow={Boolean(shadow)} onClick={onClick}>
+    <Wrapper shadow={Boolean(shadow)} onClick={onClick} data-reveal>
       {children}
     </Wrapper>
   );

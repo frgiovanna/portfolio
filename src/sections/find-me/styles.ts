@@ -15,16 +15,21 @@ export const LinksWrapper = styled.div`
   flex-direction: column;
   flex: 1;
   height: fit-content;
-  gap: 24px;
-  margin-top: 24px;
+  gap: 14px;
+  padding: 18px;
+  border-radius: ${theme.radii.xl};
+  background: ${theme.surfaces.cloud};
+  box-shadow: ${theme.insetShadows.cloudStrong};
 
   @media (min-width: 1024px) {
-    background-color: ${theme.colors.morning};
+    background:
+      ${theme.gradients.mediaLinksSurface},
+      ${theme.colors.light};
     padding: 24px;
     gap: 24px;
-    border-radius: 30px;
+    border-radius: ${theme.radii.xxl};
     margin-top: 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: ${theme.shadows.lg};
   }
 `;
 
@@ -44,4 +49,11 @@ export const DescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+  max-width: 640px;
+  padding: 22px 22px 22px 24px;
+  border: ${theme.borders.cloud};
+  border-left: ${theme.borders.accentLeft};
+  border-radius: 0 ${theme.radii.xl} ${theme.radii.xl} 0;
+  background: ${theme.surfaces.cloud};
+  box-shadow: ${theme.insetShadows.cloud};
 `;

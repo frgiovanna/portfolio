@@ -47,8 +47,8 @@ export function Projects() {
   return (
     <Section background="sky" title="Recent projects" id="projects">
       <CardsWrapper>
-        {mockedContent.map((project) => (
-          <ProjectCard {...project} />
+        {mockedContent.map((project, index) => (
+          <ProjectCard key={`${project.title}-${index}`} {...project} />
         ))}
       </CardsWrapper>
     </Section>

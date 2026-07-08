@@ -20,7 +20,7 @@ export const LinkCard = ({ link, title, headline, image }: LinkCardProps) => {
           <Text fontWeight={600}>{headline}</Text>
         </ContentWrapper>
 
-        <a href={link} target="_blank">
+        <a href={link} target="_blank" rel="noreferrer" aria-label={`Open ${title}`}>
           <LaunchRoundedIcon color="info" sx={{ fontSize: '24px' }} />
         </a>
       </Wrapper>

@@ -30,6 +30,10 @@ export function IconMenu({
 
   const [selectedItem, setSelectedItem] = React.useState(defaultSelected);
 
+  React.useEffect(() => {
+    setSelectedItem(defaultSelected);
+  }, [defaultSelected]);
+
   const handleOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -66,19 +70,27 @@ export function IconMenu({
         }}
         sx={{
           '& .MuiList-root': {
-            backgroundColor: theme.colors.cloud,
+            background: theme.gradients.menuSurface,
+            padding: '8px',
           },
           '& .MuiPaper-root': {
-            boxShadow: '0px 1px 4px rgba(0, 0, 0, 0.1)',
+            boxShadow: '0 22px 60px rgba(16, 55, 94, 0.16)',
             borderRadius: '20px',
+            overflow: 'hidden',
             '& .MuiMenuItem-root': {
-              color: 'secondary',
+              borderRadius: '14px',
+              color: theme.colors.night,
+              fontSize: '14px',
               '&:not(:last-child)': {
-                borderBottom: `1px solid ${theme.colors.light}`,
+                marginBottom: '4px',
               },
-              fontWeight: 500,
+              fontWeight: 700,
               '&:focus, &:hover': {
-                backgroundColor: theme.colors.fog,
+                backgroundColor: theme.colors.light,
+              },
+              '&.Mui-selected': {
+                backgroundColor: theme.colors.sky,
+                color: theme.colors.twilight,
               },
             },
           },
