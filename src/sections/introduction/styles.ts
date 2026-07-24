@@ -41,7 +41,6 @@ export const Wrapper = styled.section`
     justify-content: flex-start;
     min-height: min(470px, calc(100svh - 250px));
     margin-top: 0;
-    gap: 0;
     padding-bottom: 0;
   }
 `;
